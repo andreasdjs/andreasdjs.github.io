@@ -104,10 +104,6 @@ button {
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
-	body { 
- 		font-size: 72px;
-	}
-	 p { color: red;}
 	 body {
 	 	font-size: 72px;
 	 }
