@@ -73,10 +73,11 @@ button .signin, button .signup {
 	border:0; 
 	display: inline-block;
 	margin:0;
+	background-color: white;
 }
 
 .selected {
-	background-color: white;
+	background-color: skyblue;
 }
 
 /* Margin for input and buttons */ 
@@ -106,7 +107,7 @@ button {
   and (-webkit-min-device-pixel-ratio: 2) {
 
 	 body {
-	 	font-size: 72px;
+	 	font-size: 60px;
 	 }
 }
 
