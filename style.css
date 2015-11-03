@@ -103,9 +103,14 @@ button {
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
 	body { 
  		font-size: 24px;
 	}
+	 p { color: red;}
+	 body {
+	 	font-size: 24px;
+	 }
 }
 
 /* Portrait */
@@ -124,6 +129,5 @@ button {
   and (orientation: landscape) {
 
 }
-
 
 
