@@ -2,19 +2,21 @@
 /* Fullscreen radial gradient */
 html
 {
-background-color:   #0176A0;
-background-image:   -moz-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
-background-image:   -webkit-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
-background-image:   -o-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
-background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
-background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
-filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
-height: 100%;
+	background-color:   #0176A0;
+	background-image:   -moz-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -webkit-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -o-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
+	height: 100%;
+    min-height: 100%;
 }
 
 
 body {  
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
+	margin:0; /* Remove margin */
 }
 
 header {
@@ -26,6 +28,12 @@ nav {
 }
 
 #container {
+/*	display: flex; */
+/*	margin: auto 0; */
+/*	width: 500px; */
+	background-color: white;
+/*	opacity: 0.8; */
+	margin:0;
 
 }
 
@@ -36,4 +44,37 @@ article {
 h1 { 
 	text-transform: uppercase;
 }
+
+/* Inherit font (from Mozilla Developer Network) */
+
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+
+/* Set the same box styling (from Mozilla Developer Network) */
+
+input, textarea, select, button {
+  width : 100%;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+/*
+button .signin, button .signup {
+	width:50%;
+}*/
+
+.signin, .signup {
+	width:48%;
+/*	border:0; */
+	display: inline-block;
+	margin:0;
+}
+
+
+
+
 
