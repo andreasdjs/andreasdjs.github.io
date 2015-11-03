@@ -1,4 +1,39 @@
 
-body { 
+/* Fullscreen radial gradient */
+html
+{
+background-color:   #0176A0;
+background-image:   -moz-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+background-image:   -webkit-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+background-image:   -o-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
+height: 100%;
+}
+
+
+body {  
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
 }
+
+header {
+
+}
+
+nav {
+
+}
+
+#container {
+
+}
+
+article {
+
+}
+
+h1 { 
+	text-transform: uppercase;
+}
+
