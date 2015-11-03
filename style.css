@@ -151,7 +151,9 @@ button {
   and (min-resolution: 192dpi) { 
 }
 
-
+.switchLoginMethod {
+	text-decoration: underline;
+}
 
 /*
 	 body {
