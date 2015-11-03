@@ -43,6 +43,7 @@ article {
 
 h1 { 
 	text-transform: uppercase;
+	margin:0;
 }
 
 /* Inherit font (from Mozilla Developer Network) */
@@ -125,6 +126,31 @@ button {
   and (orientation: landscape) {
 
 }
+
+/* Media query for laptops */
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+ 	#container {
+ 		width: 500px;
+ 		height: 400px;
+ 		margin: 0px auto;
+	} 
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+
+
 
 /*
 	 body {
