@@ -69,12 +69,26 @@ button .signin, button .signup {
 
 .signin, .signup {
 	width:48%;
-/*	border:0; */
+	border:0; 
 	display: inline-block;
 	margin:0;
 }
 
+.selected {
+	background-color: white;
+}
 
+/* Margin for input and buttons */ 
+
+input { 
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+button {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
 
 
 

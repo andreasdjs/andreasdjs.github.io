@@ -3,8 +3,10 @@ $(document).ready(function(){
 	$(".signup").click(function (event){
 		if (signup === 0) {
 			event.preventDefault();
-			$(".signin").before("<input type='username' placeholder='Username'/>");
+			$(".submit").before("<input type='username' placeholder='Username'/>");
 			signup = 1;
+			$(".signup").addClass("selected");
+			$(".signin").removeClass("selected");
 		}
 	});
 });
