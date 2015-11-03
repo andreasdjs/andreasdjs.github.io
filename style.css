@@ -105,11 +105,11 @@ button {
   and (-webkit-min-device-pixel-ratio: 2) {
 
 	body { 
- 		font-size: 24px;
+ 		font-size: 32px;
 	}
 	 p { color: red;}
 	 body {
-	 	font-size: 24px;
+	 	font-size: 32px;
 	 }
 }
 
@@ -130,4 +130,8 @@ button {
 
 }
 
-
+/*
+	 body {
+	 	font-size: 32px;
+	 }
+*/
