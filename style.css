@@ -24,17 +24,42 @@ header {
 }
 
 nav {
-
+	background-color:white;
+	display: flex;
+/*	flex-direction: row; */
+	justify-content: center; /* Lägg till fler browsers här senare */
 }
 
-#container {
+.nav-item {
+	background-color:red;
+	width: 100%;
+}
+
+#mainContainer,
+#loginContainer {
 /*	display: flex; */
 /*	margin: auto 0; */
 /*	width: 500px; */
-	background-color: white;
+/*	background-color: white; */
 /*	opacity: 0.8; */
 	margin:0;
+}
 
+#mainContainer {
+/*	display: flex;
+	width:800px;
+	height: 100%;*/
+}
+
+#innerLoginContainer { 
+	background-color: white;
+	min-height: 200px;
+	padding: 20px;
+
+	/* Render box shadow */
+	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
 }
 
 article {
@@ -46,10 +71,17 @@ h1 {
 	margin:0;
 }
 
+h1.logo {
+	color: white;
+	font-family: Oswald;
+	font-weight: 800;
+	text-align: center;
+}
+
 /* Inherit font (from Mozilla Developer Network) */
 
 button, input, select, textarea {
-  font-family : inherit;
+  font-family : inherit; 
   font-size   : 100%;
 }
 
@@ -85,11 +117,15 @@ button .signin, button .signup {
 input { 
 	margin-top: 4px;
 	margin-bottom: 4px;
+	padding:8px;
+	padding-left:4px;
+	padding-right:4px;
 }
 
 button {
 	margin-top: 4px;
 	margin-bottom: 4px;
+	padding:8px;
 }
 
 
@@ -135,12 +171,12 @@ button {
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
+/*
  	#container {
  		width: 500px;
  		height: 400px;
  		margin: 0px auto;
-	} 
+	} */
 }
 
 /* ----------- Retina Screens ----------- */
@@ -151,12 +187,57 @@ button {
   and (min-resolution: 192dpi) { 
 }
 
+/* -- Egen media query -- */
+
+@media screen and (min-width: 700px) {
+
+ 	#loginContainer {
+ 		width: 300px;
+ 		margin: 0px auto;
+	} 
+	#mainContainer {
+		width: 800px;
+		margin: 0px auto;
+	}
+}
+
+
 .switchLoginMethod {
 	text-decoration: underline;
 }
 
-/*
-	 body {
-	 	font-size: 32px;
-	 }
-*/
+
+
+/* ------------ Store Items ------------- */
+
+article.storeItem {
+	background-color:white;
+	padding-left: 10px;
+	display: flex;
+}
+
+.storeItemImage {
+	width: 100px;
+	height: 100px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+	background: #feffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+}
+
+.addToShoppingBag {
+/*	background-color:red; */ /* debug */ 
+	line-height: 100px; /* vertical align */
+}
+
+.productDescription {
+	width: 500px;
+
+}
+
+

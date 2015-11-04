@@ -17,27 +17,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="script.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div id="container">
-		<header style="width: 100%;"><h1>Logo</h1></header>
-<!--		<nav>Navigation</nav>-->
-		<article>
-		<!--<p>text</p>-->
-			<div>
-				<div>
-					<form action="store.html" method="get">
+	<div id="loginContainer">
+		<header><h1 class="logo">Melon-Citron</h1></header>
+		<div id="innerLoginContainer">
+			<form action="store.html" method="post">
 <!--						<input type="name" placeholder="Firstname and lastname">-->
-						<input type="email" placeholder="E-mail" required/>
-						<input type="password" placeholder="Password" required/>
-						<button class="signin selected">Sign-In</button>
-						<button class="signup switchLoginMethod">or Sign-Up</button>
-<!--						<button class="submit">Go!</button>-->
-					</form>
-				</div>
-			</div>
-		</article>
+				<input type="email" placeholder="E-mail" required/>
+				<input type="password" placeholder="Password" required/>
+				<button class="signin selected">Sign-In</button>
+				<button class="signup switchLoginMethod">or Sign-Up</button>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
