@@ -190,7 +190,7 @@ button {
 /* -- Egen media query -- */
 
 /* Fixar Firefox, men pajjar iPhone 5 */
-
+/*
 @media screen and (min-width: 700px) {
 
  	#loginContainer {
@@ -202,7 +202,7 @@ button {
 		margin: 0px auto;
 	}
 }
-
+*/
 
 .switchLoginMethod {
 	text-decoration: underline;
