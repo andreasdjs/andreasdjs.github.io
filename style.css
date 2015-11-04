@@ -189,6 +189,8 @@ button {
 
 /* -- Egen media query -- */
 
+/* Fixar Firefox, men pajjar iPhone 5 */
+
 @media screen and (min-width: 700px) {
 
  	#loginContainer {
