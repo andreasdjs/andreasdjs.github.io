@@ -1,0 +1,303 @@
+
+/* Fullscreen radial gradient */
+html
+{
+	background-color:   #0176A0;
+	background-image:   -moz-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -webkit-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -o-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
+	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
+	height: 100%;
+    min-height: 100%;
+}
+
+
+body {  
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
+	margin:0; /* Remove margin */
+}
+
+header {
+
+}
+
+nav {
+	background-color:white;
+	margin:0;
+/*	height: 500px;
+	width: 900px; */
+	display: flex; 
+/*	flex-direction: row; */
+/*	justify-content: center; *//* Lägg till fler browsers här senare */
+}
+/*
+.nav-item { display: inline-block;}
+
+nav ul {
+	margin:0;
+	padding:0;
+}
+
+li {
+	display: inline-block; 
+	list-style-type: none;
+	background-color: skyblue;
+	height: 100px;
+}
+*/
+
+.nav-item {
+	width: 100%;
+	height:60px;
+	line-height:60px;
+}
+
+nav ul {
+
+	display: flex;  /* flex navigation */
+	justify-content: space-between;
+	width: 100%; 
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none; /* remove bullets */
+}
+
+nav ul li {
+	line-height: 60px;
+	padding-left: 0px;
+	display: inline-block; /* horisontal position */
+}
+
+nav ul li a {
+	/* klickbar yta */
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+/*
+nav ul li {
+	display: inline-block;
+	width: 100%;
+	height:60px;
+	line-height:60px;
+}
+*/
+
+#mainContainer,
+#loginContainer {
+/*	display: flex; */
+/*	margin: auto 0; */
+/*	width: 500px; */
+/*	background-color: white; */
+/*	opacity: 0.8; */
+	margin:0;
+}
+
+#mainContainer {
+/*	display: flex;
+	width:800px;
+	height: 100%;*/
+}
+
+#innerLoginContainer { 
+	background-color: white;
+	min-height: 200px;
+	padding: 20px;
+
+	/* Render box shadow */
+/*	
+	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25); */
+}
+
+article {
+
+}
+
+h1 { 
+	margin:0;
+}
+
+h1.logo {
+	text-transform: uppercase;
+	color: white;
+	font-family: Oswald;
+	font-weight: 800;
+	text-align: center;
+/*	margin-top:120px;
+	margin-bottom:6px; */
+}
+
+/* Inherit font (from Mozilla Developer Network) */
+
+button, input, select, textarea {
+  font-family : inherit; 
+  font-size   : 100%;
+}
+
+/* Set the same box styling (from Mozilla Developer Network) */
+
+input, textarea, select, button {
+  width : 100%;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+/*
+button .signin, button .signup {
+	width:50%;
+}*/
+
+.signin, .signup {
+	width:48%;
+	border:0; 
+	display: inline-block;
+	margin:0;
+	background-color: white;
+}
+
+.selected {
+	background-color: skyblue;
+}
+
+/* Margin for input and buttons */ 
+
+input { 
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding:8px;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+button {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding:8px;
+}
+
+
+/* 
+	Media queries from CSS Tricks 
+	https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/
+
+/* ----------- iPhone 5 and 5S ----------- */
+/*
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+	 body {
+
+	 }
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+*/
+/* Media query for laptops */
+
+/* ----------- Non-Retina Screens ----------- */
+/*
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+*/
+
+/* ----------- Retina Screens ----------- */
+/*
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+*/
+/* -- Egen media query -- */
+
+/* Removed for debug 
+@media screen and (min-width: 700px) {
+
+ 	#loginContainer {
+ 		width: 300px;
+ 		margin: 0px auto;
+	} 
+	#mainContainer {
+		width: 800px;
+		margin: 0px auto;
+	}
+
+	#innerLoginContainer { 
+	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+
+	}
+}
+
+*/
+
+.switchLoginMethod {
+	text-decoration: underline;
+}
+
+
+
+/* ------------ Store Items ------------- */
+
+article.storeItem {
+	background-color:white;
+	padding-left: 10px;
+	display: flex;
+}
+
+.storeItemImage {
+	width: 100px;
+	height: 100px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+	background: #feffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+}
+
+.addToShoppingBag {
+/*	background-color:red; */ /* debug */ 
+	line-height: 100px; /* vertical align */
+}
+
+.productDescription {
+/*	width: 500px;
+*/
+}
+
+
