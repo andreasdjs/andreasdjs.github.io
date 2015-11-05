@@ -115,14 +115,20 @@ nav ul li {
 #innerContainer {
 	margin:0;
 	background-color:white;
-	padding-right: 16px;
-	padding-left: 16px;
+	padding-right: 4px;
+	padding-left: 4px;
 }
 
 #innerLoginContainer { 
 	background-color: white;
 	min-height: 200px;
 	padding: 20px;
+
+	.innerContainerStore {
+		padding-left:4px;
+		padding-right:4px;
+	}
+
 
 	/* Render box shadow */
 /*	
@@ -223,15 +229,58 @@ button {
 	 body {
 /*	 	font-size: 60px; */
 	 }
-
+/*
 	#innerContainer { 
 		background-color: white; 
 		padding-left: 16px;
 		padding-right: 16px;
-	}
-
+	} */
 
 }
+
+
+/* ------------ Store Items ------------- */
+
+article.storeItem {
+	background-color:white;
+	padding-left: 10px;
+	display: flex;
+}
+
+.storeItemImage {
+	width: 100px;
+	height: 100px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+	background: #feffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
+
+	/* -- -- */
+	line-height:100px;
+}
+
+.addToShoppingBag {
+/*	background-color:red; */ /* debug */ 
+	line-height: 100px; /* vertical align */
+}
+
+.innerContainerStore {
+	padding-bottom: 24px;
+	padding-top: 8px;
+}
+
+.productDescription {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+
 
 /* Portrait */
 @media only screen 
@@ -315,6 +364,12 @@ button {
 		padding-right:40px;
 	}
 
+	.innerContainerStore {
+		padding-left:16px;
+		padding-right:16px;
+	}
+
+
 	/* -- Two columns -- */
 
 	.numberOfColumns {
@@ -325,6 +380,12 @@ button {
 		column-count: 2;
 		column-gap: 32px;
 	}
+
+	.productDescription {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
 
 }
 
@@ -350,48 +411,6 @@ button {
 		padding-bottom: 54px;
 	}
 
-
-/* ------------ Store Items ------------- */
-
-article.storeItem {
-	background-color:white;
-	padding-left: 10px;
-	display: flex;
-}
-
-.storeItemImage {
-	width: 100px;
-	height: 100px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
-	background: #feffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
-
-	/* -- -- */
-	line-height:100px;
-}
-
-.addToShoppingBag {
-/*	background-color:red; */ /* debug */ 
-	line-height: 100px; /* vertical align */
-}
-
-.innerContainerStore {
-	padding-bottom: 24px;
-	padding-top: 8px;
-}
-
-.productDescription {
-	padding-left: 16px;
-	padding-right: 16px;
-/*	width: 500px;
-*/
-}
 
 /* duplicate 
 #innerContainer {
