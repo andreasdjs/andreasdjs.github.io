@@ -280,6 +280,27 @@ article.storeItem {
 }
 
 
+.switchLoginMethod {
+	text-decoration: underline;
+}
+
+
+
+/* ------------ About text styling ------------- */
+
+	p { 
+		margin-top: 16px;
+		line-height: 19px;
+	}
+
+	.mainArticle { 
+		padding-top: 32px;
+/*		padding-bottom: 48px; */
+		padding-bottom: 54px;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
 
 
 /* Portrait */
@@ -386,6 +407,11 @@ article.storeItem {
 		padding-right: 16px;
 	}
 
+	.mainArticle {
+		padding-left:40px;
+		padding-right:40px;
+	}
+	
 
 }
 
@@ -394,22 +420,6 @@ article.storeItem {
 
 
 
-.switchLoginMethod {
-	text-decoration: underline;
-}
-
-/* ------------ About text styling ------------- */
-
-	p { 
-		margin-top: 16px;
-		line-height: 19px;
-	}
-
-	.mainArticle { 
-		padding-top: 32px;
-/*		padding-bottom: 48px; */
-		padding-bottom: 54px;
-	}
 
 
 /* duplicate 
