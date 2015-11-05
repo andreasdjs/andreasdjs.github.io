@@ -9,14 +9,16 @@ html
 	background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
 	background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
 	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
-	height: 100%;
+	height: 100%; /* html, body for full screen background gradient and full height container background */
     min-height: 100%;
 }
 
 
 body {  
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif;
+/*	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; */
+	font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; 
 	margin:0; /* Remove margin */
+	height: 100%;
 }
 
 header {
@@ -26,8 +28,10 @@ header {
 nav {
 	background-color:white;
 	margin:0;
-/*	height: 500px;
-	width: 900px; */
+	border-bottom: 1px solid black;
+/*	width: 100%; */
+/*	height: 500px;*/
+/*	width: 800px; */
 	display: flex; 
 /*	flex-direction: row; */
 /*	justify-content: center; *//* Lägg till fler browsers här senare */
@@ -100,8 +104,12 @@ nav ul li {
 
 #mainContainer {
 /*	display: flex;
-	width:800px;
-	height: 100%;*/
+	width:800px; */
+	height: 100%;  /* fill white vertically */
+	background-color:white;
+/*
+	display: flex;
+	flex-direction: row; */
 }
 
 #innerLoginContainer { 
@@ -120,9 +128,16 @@ article {
 
 }
 
+/* reset margins */
 h1 { 
-	margin:0;
+	margin: 0;
 }
+
+p {
+	margin: 0;
+}
+
+/* Set heading font for impact */ 
 
 h1.logo {
 	text-transform: uppercase;
@@ -245,17 +260,14 @@ button {
 
 /* -- Egen media query -- */
 
-/* Removed for debug 
 @media screen and (min-width: 700px) {
 
+/* -- Box styling for login page -- */
  	#loginContainer {
  		width: 300px;
  		margin: 0px auto;
 	} 
-	#mainContainer {
-		width: 800px;
-		margin: 0px auto;
-	}
+/* Shadow to emphasis the content */
 
 	#innerLoginContainer { 
 	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
@@ -263,14 +275,64 @@ button {
 	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
 
 	}
+
+/* -- mainContainer on store and about page -- */
+
+	#mainContainer {
+		width: 800px;
+		margin: 0px auto;
+	}
+
+	nav { 
+		width: 800px; 
+		margin: 0; 
+		padding: 0;
+		display: block;
+
+	}
+
+	.innerContainer { 
+		
+	background-color: white; 
+	padding-left:40px;
+	padding-right:40px;
+
+
+	}
+
+
+
+/* -- Two columns -- */
+
+.numberOfColumns {
+	-moz-column-count: 2;
+	-moz-column-gap: 32px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 32px;
+	column-count: 2;
+	column-gap: 32px;
 }
 
-*/
+
+}
+
+
 
 .switchLoginMethod {
 	text-decoration: underline;
 }
 
+/* ------------ About text styling ------------- */
+
+	p { 
+		margin-top: 16px;
+		line-height: 19px;
+	}
+
+	.mainArticle { 
+		padding-top: 32px;
+		padding-bottom: 48px;
+	}
 
 
 /* ------------ Store Items ------------- */
@@ -305,4 +367,22 @@ article.storeItem {
 */
 }
 
+#innerContainer {
+	background-color:white;
+	padding-left:50px;
+	padding-right:50px;
 
+}
+
+
+
+/* -- Two columns -- */
+/*
+.numberOfColumns {
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+}*/
