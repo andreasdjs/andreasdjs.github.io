@@ -112,6 +112,13 @@ nav ul li {
 	flex-direction: row; */
 }
 
+#innerContainer {
+	margin:0;
+	background-color:white;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
 #innerLoginContainer { 
 	background-color: white;
 	min-height: 200px;
@@ -216,6 +223,14 @@ button {
 	 body {
 /*	 	font-size: 60px; */
 	 }
+
+	#innerContainer { 
+		background-color: white; 
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+
 }
 
 /* Portrait */
@@ -262,12 +277,12 @@ button {
 
 @media screen and (min-width: 700px) {
 
-/* -- Box styling for login page -- */
+	/* -- Box styling for login page -- */
  	#loginContainer {
  		width: 300px;
  		margin: 0px auto;
 	} 
-/* Shadow to emphasis the content */
+	/* Shadow to emphasis the content */
 
 	#innerLoginContainer { 
 	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
@@ -276,7 +291,7 @@ button {
 
 	}
 
-/* -- mainContainer on store and about page -- */
+	/* -- mainContainer on store and about page -- */
 
 	#mainContainer {
 		width: 800px;
@@ -291,30 +306,27 @@ button {
 
 	}
 
-	.innerContainer { 
-		
-	background-color: white; 
-	padding-left:40px;
-	padding-right:40px;
-
-
+	#innerContainer { 
+		background-color: white; 
+		padding-left:40px;
+		padding-right:40px;
 	}
 
+	/* -- Two columns -- */
 
-
-/* -- Two columns -- */
-
-.numberOfColumns {
-	-moz-column-count: 2;
-	-moz-column-gap: 32px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 32px;
-	column-count: 2;
-	column-gap: 32px;
-}
-
+	.numberOfColumns {
+		-moz-column-count: 2;
+		-moz-column-gap: 32px;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 32px;
+		column-count: 2;
+		column-gap: 32px;
+	}
 
 }
+
+/* -- End of desktop CSS -- */
+
 
 
 
@@ -367,14 +379,15 @@ article.storeItem {
 */
 }
 
+/* duplicate 
 #innerContainer {
 	background-color:white;
-	padding-left:50px;
-	padding-right:50px;
+	padding-left:16px;
+	padding-right:16px;
 
 }
 
-
+*/
 
 /* -- Two columns -- */
 /*
