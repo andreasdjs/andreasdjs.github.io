@@ -245,8 +245,7 @@ button {
 
 /* -- Egen media query -- */
 
-/* Fixar Firefox, men pajjar iPhone 5 */
-
+/* Removed for debug 
 @media screen and (min-width: 700px) {
 
  	#loginContainer {
@@ -266,6 +265,7 @@ button {
 	}
 }
 
+*/
 
 .switchLoginMethod {
 	text-decoration: underline;
