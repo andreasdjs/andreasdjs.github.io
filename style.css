@@ -83,6 +83,22 @@ nav ul li a {
 	color: black;
 }
 
+
+/* -- Paint it black! -- */
+nav { 
+	background-color: black;
+}
+
+nav ul li a {
+	color: white;
+}
+
+nav ul li a:hover { 
+	color: #e0e0e0;
+}
+
+/* -- END: Paint it black! -- */
+
 /*
 nav ul li {
 	display: inline-block;
@@ -391,7 +407,7 @@ article.storeItem {
   and (min-resolution: 192dpi) { 
 }
 
-/* -- Egen media query -- */
+/* -- Desktop/Laptop media query -- */
 
 @media screen and (min-width: 700px) {
 
@@ -399,6 +415,8 @@ article.storeItem {
  	#loginContainer {
  		width: 300px;
  		margin: 0px auto;
+
+ 		margin-top:120px;
 	} 
 	/* Shadow to emphasis the content */
 
