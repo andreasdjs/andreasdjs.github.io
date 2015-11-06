@@ -284,6 +284,7 @@ article.storeItem {
 .addToShoppingBag {
 /*	background-color:red; */ /* debug */ 
 	line-height: 100px; /* vertical align */
+	min-width: 60px;
 }
 
 .innerContainerStore {
@@ -480,6 +481,27 @@ article.storeItem {
 		padding-right:40px;
 	}
 	
+/* -- Test! --*/
+	.innerContainerStore {
+	display: flex;
+	flex-wrap: wrap;
+	}
+	article .storeItem {
+		width: 500px; 
+		padding-right:16px;
+	}
+	.addToShoppingBag { margin-right:70px;}
+
+#innerContainer { 
+		padding-left:80px; 
+	}
+
+
+	/*
+	.innerContainerStore {
+		padding-left: 80px;
+	}*/
+/*-- End Test --*/
 
 }
 

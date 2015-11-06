@@ -1,4 +1,4 @@
-$(document).write(function(){
+$(document).ready(function(){
 	$("body").blur();
 
 });
