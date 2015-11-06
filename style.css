@@ -284,7 +284,7 @@ article.storeItem {
 .addToShoppingBag {
 /*	background-color:red; */ /* debug */ 
 	line-height: 100px; /* vertical align */
-	min-width: 60px;
+	min-width: 80px;
 }
 
 .innerContainerStore {
@@ -490,23 +490,26 @@ article.storeItem {
 		width: 500px; 
 		padding-right:16px;
 	}
-	.addToShoppingBag { margin-right:70px;}
+	.addToShoppingBag { margin-right:0px;} 
 
-#innerContainer { 
-		padding-left:80px; 
+	#innerContainer.innerContainerStore {
+		padding-left:80px;
+
 	}
 
+	div#innerContainer article.storeItem {
+	/*	background-color: silver; */
+	width: 420px;
+	}
 
-	/*
-	.innerContainerStore {
-		padding-left: 80px;
-	}*/
-/*-- End Test --*/
+	.productDescription {
+		width: 180px; /* minus padding */
+		width: 148px;
+	}
 
 }
 
 /* -- End of desktop CSS -- */
-
 
 
 
