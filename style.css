@@ -121,14 +121,16 @@ nav ul li {
 
 #innerLoginContainer { 
 	background-color: white;
-	min-height: 200px;
+	min-height: 184px;
 	padding: 20px;
+	padding-top:20px;
 
 	.innerContainerStore {
 		padding-left:4px;
 		padding-right:4px;
 	}
 
+button { margin-top: 4px; marign-bottom: 4px;}
 
 	/* Render box shadow */
 /*	
@@ -190,6 +192,7 @@ button .signin, button .signup {
 	display: inline-block;
 	margin:0;
 	background-color: white;
+	margin-top: 4px;
 }
 
 .selected {
@@ -207,8 +210,6 @@ input {
 }
 
 button {
-	margin-top: 4px;
-	margin-bottom: 4px;
 	padding:8px;
 }
 
@@ -301,6 +302,47 @@ article.storeItem {
 		padding-right: 16px;
 	}
 
+/* ------------ Button  ------------- */
+/* - http://css3buttongenerator.com/ -*/
+
+.button {
+  background: #41bdf2;
+  background-image: -webkit-linear-gradient(top, #41bdf2, #0c77a8);
+  background-image: -moz-linear-gradient(top, #41bdf2, #0c77a8);
+  background-image: -ms-linear-gradient(top, #41bdf2, #0c77a8);
+  background-image: -o-linear-gradient(top, #41bdf2, #0c77a8);
+  background-image: linear-gradient(to bottom, #41bdf2, #0c77a8);
+/*
+
+	background-image: -webkit-linear-gradient(top, #029CC9, #005077);
+ 	background-image: -moz-linear-gradient(top, #029CC9, #005077);
+ 	background-image: -ms-linear-gradient(top, #029CC9, #005077);
+  	background-image: -o-linear-gradient(top, #029CC9, #005077);
+  	background-image: linear-gradient(to bottom, #029CC9, #005077);
+
+*/
+
+/*  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px; */
+  text-shadow: 0px 1px 1px #202020;
+  font-family: Arial;
+  color: #ffffff;
+/*  font-size: 20px; */
+  padding: 10px 20px 10px 20px;
+  border: solid #595959 1px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #5ccaf2;
+  background-image: -webkit-linear-gradient(top, #5ccaf2, #2192c2);
+  background-image: -moz-linear-gradient(top, #5ccaf2, #2192c2);
+  background-image: -ms-linear-gradient(top, #5ccaf2, #2192c2);
+  background-image: -o-linear-gradient(top, #5ccaf2, #2192c2);
+  background-image: linear-gradient(to bottom, #5ccaf2, #2192c2);
+  text-decoration: none;
+}
 
 
 /* Portrait */
@@ -420,25 +462,3 @@ article.storeItem {
 
 
 
-
-
-/* duplicate 
-#innerContainer {
-	background-color:white;
-	padding-left:16px;
-	padding-right:16px;
-
-}
-
-*/
-
-/* -- Two columns -- */
-/*
-.numberOfColumns {
-	-moz-column-count: 2;
-	-moz-column-gap: 10px;
-	-webkit-column-count: 2;
-	-webkit-column-gap: 10px;
-	column-count: 2;
-	column-gap: 10px;
-}*/
