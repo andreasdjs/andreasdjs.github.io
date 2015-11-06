@@ -244,7 +244,7 @@ button {
 
 article.storeItem {
 	background-color:white;
-	padding-left: 10px;
+	padding-left: 0px;
 	display: flex;
 }
 
@@ -331,6 +331,9 @@ article.storeItem {
 /*  font-size: 20px; */
   padding: 10px 20px 10px 20px;
   border: solid #595959 1px;
+
+  border: solid white 1px;
+
   text-decoration: none;
 }
 
@@ -342,6 +345,9 @@ article.storeItem {
   background-image: -o-linear-gradient(top, #5ccaf2, #2192c2);
   background-image: linear-gradient(to bottom, #5ccaf2, #2192c2);
   text-decoration: none;
+
+  border: solid #000000 1px;
+
 }
 
 

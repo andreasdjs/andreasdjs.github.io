@@ -46,10 +46,10 @@ $(document).ready(function(){
 	});
 
 
-
-
 });
 
-
+/*
 
 prev().hide().fadeIn(1000);
+
+*/
