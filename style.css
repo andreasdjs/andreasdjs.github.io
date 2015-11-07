@@ -361,12 +361,15 @@ article.storeItem {
   border: solid white 1px;
 
   text-decoration: none;
-/* -- hack for vertical aligning in IE 7+ */
-/* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  /* -- end hack for vert align in IE 7+ */ 
+}
+
+.buyButton {
+	/* -- hack for vertical aligning in IE 7+ */
+	/* http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/ */
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	/* -- end hack for vert align in IE 7+ */ 
 }
 
 .button:hover {
@@ -503,7 +506,10 @@ article.storeItem {
 		width: 500px; 
 		padding-right:16px;
 	}
-	.addToShoppingBag { margin-right:0px;} 
+	.addToShoppingBag { 
+		margin-right:0px;
+
+	} 
 
 	#innerContainer.innerContainerStore {
 		padding-left:80px;
