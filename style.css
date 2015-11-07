@@ -243,6 +243,11 @@ article.storeItem {
 	text-decoration: underline;
 }
 
+/* width */
+	.productDescription {
+	/*	width: 180px; */ 
+		width: 156px; /* width minus 4 + 4 padding */
+	}
 
 
 /* ------------ About text styling ------------- */
@@ -396,7 +401,7 @@ article.storeItem {
 
 	.productDescription {
 	/*	width: 180px; */ 
-		width: 148px; /* width minus padding */
+		width: 148px; /* width minus 16 + 16 padding */
 	}
 
 }
