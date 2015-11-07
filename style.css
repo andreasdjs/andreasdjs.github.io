@@ -1,5 +1,6 @@
 
-/* Fullscreen radial gradient */
+/* -- Fullscreen radial gradient -- */
+
 html
 {
 	background-color:   #0176A0;
@@ -9,15 +10,16 @@ html
 	background-image:   -ms-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
 	background-image:   radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
 	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
-	height: 100%; /* html, body for full screen background gradient and full height container background */
+
+	/* html and body at 100% height required for full screen background gradient */
+	height: 100%; 
     min-height: 100%;
 }
 
 
 body {  
-/*	font-family: "Open Sans", "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; */
 	font-family: "Helvetica Neue", Helvetica, Calibri, Arial, sans-serif; 
-	margin:0; /* Remove margin */
+	margin:0; /* Remove default margins */
 	height: 100%;
 }
 
@@ -29,28 +31,8 @@ nav {
 	background-color:white;
 	margin:0;
 	border-bottom: 1px solid black;
-/*	width: 100%; */
-/*	height: 500px;*/
-/*	width: 800px; */
 	display: flex; 
-/*	flex-direction: row; */
-/*	justify-content: center; *//* Lägg till fler browsers här senare */
 }
-/*
-.nav-item { display: inline-block;}
-
-nav ul {
-	margin:0;
-	padding:0;
-}
-
-li {
-	display: inline-block; 
-	list-style-type: none;
-	background-color: skyblue;
-	height: 100px;
-}
-*/
 
 .nav-item {
 	width: 100%;
@@ -59,12 +41,10 @@ li {
 }
 
 nav ul {
-
 	display: flex;  /* flex navigation */
 	justify-content: space-between;
 	width: 100%; 
-
-	margin: 0;
+	margin: 0; /* reset margins */ 
 	padding: 0;
 	list-style-type: none; /* remove bullets */
 }
@@ -76,7 +56,7 @@ nav ul li {
 }
 
 nav ul li a {
-	/* klickbar yta */
+	/* Bigger area for selection */
 	padding-left: 20px;
 	padding-right: 20px;
 	text-decoration: none;
@@ -85,6 +65,7 @@ nav ul li a {
 
 
 /* -- Paint it black! -- */
+
 nav { 
 	background-color: black;
 }
@@ -99,33 +80,14 @@ nav ul li a:hover {
 
 /* -- END: Paint it black! -- */
 
-/*
-nav ul li {
-	display: inline-block;
-	width: 100%;
-	height:60px;
-	line-height:60px;
-}
-*/
-
 #mainContainer,
 #loginContainer {
-/*	display: flex; */
-/*	margin: auto 0; */
-/*	width: 500px; */
-/*	background-color: white; */
-/*	opacity: 0.8; */
 	margin:0;
 }
 
 #mainContainer {
-/*	display: flex;
-	width:800px; */
 	height: 100%;  /* fill white vertically */
 	background-color:white;
-/*
-	display: flex;
-	flex-direction: row; */
 }
 
 #innerContainer {
@@ -140,20 +102,9 @@ nav ul li {
 	min-height: 184px;
 	padding: 20px;
 	padding-top:20px;
-
-	.innerContainerStore {
-		padding-left:4px;
-		padding-right:4px;
-	}
+}
 
 button { margin-top: 4px; marign-bottom: 4px;}
-
-	/* Render box shadow */
-/*	
-	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
-	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25); */
-}
 
 article {
 
@@ -197,10 +148,6 @@ input, textarea, select, button {
      -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
           box-sizing: border-box;
 }
-/*
-button .signin, button .signup {
-	width:50%;
-}*/
 
 .signin, .signup {
 	width:48%;
@@ -230,28 +177,18 @@ button {
 }
 
 
-/* 
-	Media queries from CSS Tricks 
-	https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-*/
-
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
+
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
 	 body {
-/*	 	font-size: 60px; */
+
 	 }
-/*
-	#innerContainer { 
-		background-color: white; 
-		padding-left: 16px;
-		padding-right: 16px;
-	} */
 
 }
 
@@ -276,19 +213,10 @@ article.storeItem {
 	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
-
-	/* -- -- */
-
-	/* - align vertically -- *//*
-	line-height:100px;
- 
-	*/
 }
 
 .addToShoppingBag {
-/*	background-color:red; */ /* debug */ 
 	height:100px;
-/*	line-height: 100px; *//* vertical align */
 	min-width: 80px;
 }
 
@@ -334,32 +262,14 @@ article.storeItem {
   background-image: -ms-linear-gradient(top, #41bdf2, #0c77a8);
   background-image: -o-linear-gradient(top, #41bdf2, #0c77a8);
   background-image: linear-gradient(to bottom, #41bdf2, #0c77a8);
-/*
 
-	background-image: -webkit-linear-gradient(top, #029CC9, #005077);
- 	background-image: -moz-linear-gradient(top, #029CC9, #005077);
- 	background-image: -ms-linear-gradient(top, #029CC9, #005077);
-  	background-image: -o-linear-gradient(top, #029CC9, #005077);
-  	background-image: linear-gradient(to bottom, #029CC9, #005077);
-
-*/
-
-/*  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 5px; */
   text-shadow: 0px 1px 1px #202020;
-  font-family: Arial;
+/*  font-family: Arial; */
   color: #ffffff;
-/*  font-size: 20px; */
-/*  padding: 10px 20px 10px 20px; */
   padding-top: 12px;
   padding-bottom: 12px;
-/*  padding-left: 12px;
-  padding-right: 12px; */
-  border: solid #595959 1px;
-
+/*  border: solid #595959 1px; */
   border: solid white 1px;
-
   text-decoration: none;
 }
 
@@ -381,52 +291,12 @@ article.storeItem {
   background-image: linear-gradient(to bottom, #5ccaf2, #2192c2);
   text-decoration: none;
 
-  border: solid #000000 1px;
+  border: solid #000000 1px; /* Shows it is marked */
 
 }
 
 
-/* Portrait */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) {
-
-}
-
-/* Media query for laptops */
-
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-/*
- 	#container {
- 		width: 500px;
- 		height: 400px;
- 		margin: 0px auto;
-	} */
-}
-
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
-
-/* -- Desktop/Laptop media query -- */
+/* -- Larger screen media query -- */
 
 @media screen and (min-width: 700px) {
 
@@ -437,27 +307,22 @@ article.storeItem {
 
  		margin-top:120px;
 	} 
+
 	/* Shadow to emphasis the content */
-
 	#innerLoginContainer { 
-	-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
-	box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
-
+		-webkit-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
+		box-shadow: 0px 5px 34px 0px rgba(0,0,0,0.25);
 	}
 
 	/* -- mainContainer on store and about page -- */
 
 	#mainContainer {
-/*		width: 960px;*/
-/*		min-width:700px;*/
 		width: 960px;
 		margin: 0px auto;
 	}
 
 	nav { 
-	/*	width: 960px;*/
-/*		width: 700px; */
 		margin: 0; 
 		padding: 0;
 		display: block;
@@ -497,10 +362,11 @@ article.storeItem {
 		padding-right:40px;
 	}
 	
-/* -- Test! --*/
+/* -- Making store items appear in two columns + layout -- */
+
 	.innerContainerStore {
-	display: flex;
-	flex-wrap: wrap;
+		display: flex;
+		flex-wrap: wrap;
 	}
 	article .storeItem {
 		width: 500px; 
@@ -517,13 +383,12 @@ article.storeItem {
 	}
 
 	div#innerContainer article.storeItem {
-	/*	background-color: silver; */
-	width: 420px;
+		width: 420px;
 	}
 
 	.productDescription {
-		width: 180px; /* minus padding */
-		width: 148px;
+	/*	width: 180px; */ 
+		width: 148px; /* width minus padding */
 	}
 
 }
