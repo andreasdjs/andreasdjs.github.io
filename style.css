@@ -230,6 +230,14 @@ article.storeItem {
 	padding-right: 4px;
 }
 
+.productDescription h3 {
+	margin-top: 16px; 
+	margin-bottom: 4px;
+}
+
+.productDescription p {
+	margin-top: 4px;
+}
 
 .switchLoginMethod {
 	text-decoration: underline;
