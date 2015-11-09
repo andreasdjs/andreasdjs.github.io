@@ -333,6 +333,10 @@ article.storeItem {
 
 }
 
+.itemsToCheckout {
+	color: #1FDE58;
+	font-weight: bold;
+}
 
 /* -- Larger screen media query -- */
 
