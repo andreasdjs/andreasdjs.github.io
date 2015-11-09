@@ -62,6 +62,8 @@ function msieversion() {
 
 
 	/* Oh no! Commersial break. */
+
+/*	
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
 			$(".advertisment").slideDown(); 
@@ -70,7 +72,7 @@ function msieversion() {
 		console.log("did it fire?");
 	});
 
-
+*/
 
 
 });
