@@ -46,10 +46,13 @@ $(document).ready(function(){
 	});
 
 
+	/* Oh no! Commersial break. */
+	$(".innerContainerStore").one("click", function(){
+		setTimeout(function(e){
+			$(".advertisment").slideDown(); 
+			$(".advertisment").delay(3000).fadeOut();
+		}, 1500);
+	});
+
 });
 
-/*
-
-prev().hide().fadeIn(1000);
-
-*/
