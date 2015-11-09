@@ -378,7 +378,7 @@ article.storeItem {
 		padding-right:16px;
 	}
 
-	/* -- Fix for IE because of flex -- */
+	/* -- Fix for IE 9 because of flex -- */
 
 
 	.storeItemImage { 
@@ -395,6 +395,9 @@ article.storeItem {
 		float:left;
 		display: inline-block;
 		height:100px;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
 /*		line-height:100px;*/
 	}
 
