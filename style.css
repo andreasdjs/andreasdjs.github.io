@@ -418,6 +418,12 @@ article.storeItem {
 		background-color:red; /* debug */
 	}
 
+	.storeItemImage { 
+		display: inline-block; /* IE 9 FIX*/
+	}
+	.productDescription {
+		display: inline-block; /* IE 9 FIX*/
+	}
 
 	.productDescription {
 	/*	width: 180px; */ 
