@@ -217,7 +217,8 @@ article.storeItem {
 
 .addToShoppingBag {
 	height:100px;
-	min-width: 80px;
+/*	min-width: 80px; */
+	width:80px;
 }
 
 .innerContainerStore {
