@@ -57,9 +57,19 @@ $(document).ready(function(){
 
 /* */
 
-	$(".buyButton").click(function (event){
+	$(".buyButton").click(function (){
 		$(".shoppingBag").addClass("itemsToCheckout");
 		$(".counter").text("(1)");
+/*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
+		    var animateIt = $(".itemsToCheckout");
+		    animateIt.animate({fontSize: '17px'}, 30);
+ 		    animateIt.animate({fontSize: '16px'}, 80);
+ /*
+
+      $( ".itemsToCheckOut" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff"
+        }, 1000 );*/
 	});
 
 
@@ -78,14 +88,14 @@ $(document).ready(function(){
 	});
 
 /* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
-
+/*
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
 			$(".advertisment").slideDown(); 
 			$(".advertisment").delay(3000).fadeOut();
 		}, 1500);
-		console.log("did it fire?"); /* Yes, it did fire, after disabling Ad-Block. */
+		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
-
+*/
 });
 
