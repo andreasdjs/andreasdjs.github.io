@@ -371,16 +371,19 @@ article.storeItem {
 
 
 	.storeItemImage { 
+		float:left;
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;
 		background-color:skyblue;
 	}
 	.productDescription {
+		float:left;
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;
 		background-color:pink;
 	}
 	.addToShoppingBag {
+		float:left;
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;	
 		background-color:blue;
