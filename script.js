@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 /* -- Focus all but IE < 11*/
-/*
+
 function msieversion() {
 
         var ua = window.navigator.userAgent;
@@ -16,7 +16,7 @@ function msieversion() {
 }
 
 	msieversion();
-*/
+
 	
 
 	var signup = 0;
@@ -63,7 +63,6 @@ function msieversion() {
 
 	/* Oh no! Commersial break. */
 
-/*	
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
 			$(".advertisment").slideDown(); 
@@ -72,7 +71,6 @@ function msieversion() {
 		console.log("did it fire?");
 	});
 
-*/
 
 
 });
