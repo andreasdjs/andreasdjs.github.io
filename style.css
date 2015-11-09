@@ -415,6 +415,7 @@ article.storeItem {
 
 	div#innerContainer article.storeItem {
 		width: 420px !important;
+		background-color:red; /* debug */
 	}
 
 
