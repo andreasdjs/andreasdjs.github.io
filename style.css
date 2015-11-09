@@ -400,7 +400,7 @@ article.storeItem {
 		flex-wrap: wrap;
 	}
 	article .storeItem {
-		width: 500px; 
+/*		width: 500px; */  /* 420 px?*/
 		padding-right:16px;
 	}
 	.addToShoppingBag { 
@@ -414,8 +414,9 @@ article.storeItem {
 	}
 
 	div#innerContainer article.storeItem {
-		width: 420px;
+		width: 420px !important;
 	}
+
 
 	.productDescription {
 	/*	width: 180px; */ 
