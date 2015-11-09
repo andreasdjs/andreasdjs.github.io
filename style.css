@@ -387,6 +387,16 @@ article.storeItem {
 /*		line-height:100px;*/
 	}
 
+	.cf:before,
+	.cf:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+
+	.cf:after {
+	    clear: both;
+	}
+
 
 	/* -- Two columns -- */
 
