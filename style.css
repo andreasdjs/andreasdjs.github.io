@@ -372,12 +372,15 @@ article.storeItem {
 
 	.storeItemImage { 
 		display: inline-block; /* IE 9 FIX*/
+		height:100px;
 	}
 	.productDescription {
 		display: inline-block; /* IE 9 FIX*/
+		height:100px;
 	}
 	.addToShoppingBag {
-		display: inline-block; /* IE 9 FIX*/		
+		display: inline-block; /* IE 9 FIX*/
+		height:100px;	
 	}
 
 
