@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-	$("input[type='email']").focus(); 
+/*	$("input[type='email']").focus(); */
 	
 
 	var signup = 0;
