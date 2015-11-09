@@ -1,23 +1,18 @@
 $(document).ready(function(){
 
-/* -- Focus all but IE < 11*/
-
-function msieversion() {
-
+/* -- Focus all but IE < 11 because placeholder won't be visible otherwise	*/
+	function defocusInputForIE() {
         var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
-
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
-         	var x = 0;
+        var msie = ua.indexOf("MSIE "); 
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, do nothing.
+         	var x = 0; /* dummy code*/
         else 
-        	$("input[type='email']").focus(); 
+        	$("input[type='email']").focus(); // Focus input field email
+	   return false;
+	}
+	defocusInputForIE();
 
-   return false;
-}
-
-	msieversion();
-
-	
+/* -- Switch Sign-in / Sign-up for usability-- */	
 
 	var signup = 0;
 	$(".signup").click(function (event){
@@ -61,7 +56,7 @@ function msieversion() {
 	});
 
 
-	/* Oh no! Commersial break. */
+/* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
 
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
@@ -70,8 +65,6 @@ function msieversion() {
 		}, 1500);
 		console.log("did it fire?");
 	});
-
-
 
 });
 
