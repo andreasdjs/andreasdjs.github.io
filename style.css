@@ -31,7 +31,11 @@ nav {
 	background-color:white;
 	margin:0;
 	border-bottom: 1px solid black;
-	display: flex; 
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+ 	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 
 .nav-item {
@@ -41,7 +45,11 @@ nav {
 }
 
 nav ul {
-	display: flex;  /* flex navigation */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 	justify-content: space-between;
 	width: 100%; 
 	margin: 0; /* reset margins */ 
@@ -198,7 +206,12 @@ button {
 article.storeItem {
 	background-color:white;
 	padding-left: 0px;
-	display: flex;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
 }
 
 .storeItemImage {
@@ -379,7 +392,11 @@ article.storeItem {
 /* -- Making store items appear in two columns + layout -- */
 
 	.innerContainerStore {
-		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  		display: -ms-flexbox;      /* TWEENER - IE 10 */
+  		display: -webkit-flex;     /* NEW - Chrome */
+  		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 		flex-wrap: wrap;
 	}
 	article .storeItem {
