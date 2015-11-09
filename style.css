@@ -373,14 +373,17 @@ article.storeItem {
 	.storeItemImage { 
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;
+		background-color:skyblue;
 	}
 	.productDescription {
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;
+		background-color:pink;
 	}
 	.addToShoppingBag {
 		display: inline-block; /* IE 9 FIX*/
 		height:100px;	
+		background-color:blue;
 	}
 
 
