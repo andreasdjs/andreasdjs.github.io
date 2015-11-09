@@ -63,11 +63,14 @@ function msieversion() {
 
 	/* Oh no! Commersial break. */
 	$(".innerContainerStore").one("click", function(){
-		setTimeout(function(e){
+		setTimeout(function(){
 			$(".advertisment").slideDown(); 
 			$(".advertisment").delay(3000).fadeOut();
 		}, 1500);
+		console.log("did it fire?");
 	});
+
+
 
 
 });
