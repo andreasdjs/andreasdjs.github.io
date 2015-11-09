@@ -55,6 +55,22 @@ $(document).ready(function(){
 		}
 	});
 
+/* */
+
+
+/* -- Show shopping bag-- */
+	$(".shoppingBag").click(function (event){
+		console.log("click click");
+		$("article").remove();
+		$("#innerContainer").html("<article><h1>Your shoppingbag</h1><p>Item</p><p>Item</p><p>Item</p></article>");
+	
+/*		$("article").append("<h1>Your shoppingbag</h1>");
+		$("#innerContainer").append("<p>Item</p><p>Item</p><p>Item</p><button>Check out</button>"); */
+		$("article").append("<p>Item</p><p>Item</p><p>Item</p><p></p>");
+
+		$("article").append("<button class='button'>Check out</button>");
+
+	});
 
 /* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
 
@@ -63,7 +79,7 @@ $(document).ready(function(){
 			$(".advertisment").slideDown(); 
 			$(".advertisment").delay(3000).fadeOut();
 		}, 1500);
-		console.log("did it fire?");
+		console.log("did it fire?"); /* Yes, it did fire, after disabling Ad-Block. */
 	});
 
 });
