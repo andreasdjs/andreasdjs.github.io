@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- Svenska tecken -->
-<!--	<meta charset="UTF-8"/> -->
+	<meta charset="UTF-8"/>
 	<!-- Talar om vem som skrivit dokumentet, berörd kurs samt ett antal sökord.
 	-->
 	<meta name="author" content="Andreas Dagnell"/>
@@ -18,7 +18,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="script.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -27,7 +26,6 @@
 		<header><h1 class="logo">Melon-Citron</h1></header>
 		<div id="innerLoginContainer">
 			<form action="store.html" method="get">
-<!--						<input type="name" placeholder="Firstname and lastname">-->
 				<input type="email" placeholder="E-mail" required/>
 				<input type="password" placeholder="Password" required/>
 				<button class="signin selected button">Sign-In</button>
@@ -36,5 +34,12 @@
 		</div>
 	</div>
 
+<!-- Placeholder in input for IE -->
+	<script src="jquery.placeholder.js"></script>
+	<script>
+		$(function() {
+			$('input, textarea').placeholder({customClass:'my-placeholder'});
+		});
+	</script>	
 </body>
 </html>
