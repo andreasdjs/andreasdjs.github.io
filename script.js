@@ -1,7 +1,22 @@
 $(document).ready(function(){
 
+/* -- Focus all but IE < 11*/
+function msieversion() {
 
-/*	$("input[type='email']").focus(); */
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
+            alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+        else                 // If another browser, return 0
+       		$("input[type='email']").focus(); 
+/*            alert('otherbrowser'); */
+
+   return false;
+}
+
+	msieversion();
+
 	
 
 	var signup = 0;
@@ -54,19 +69,6 @@ $(document).ready(function(){
 		}, 1500);
 	});
 
-/* -- Defocus IE */
-function msieversion() {
-
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
-
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer, return version number
-            alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-        else                 // If another browser, return 0
-            alert('otherbrowser');
-
-   return false;
-}
 
 });
 
