@@ -367,6 +367,19 @@ article.storeItem {
 		padding-right:16px;
 	}
 
+	/* -- Fix for IE because of flex -- */
+
+
+	.storeItemImage { 
+		display: inline-block; /* IE 9 FIX*/
+	}
+	.productDescription {
+		display: inline-block; /* IE 9 FIX*/
+	}
+	.addToShoppingBag {
+		display: inline-block; /* IE 9 FIX*/		
+	}
+
 
 	/* -- Two columns -- */
 
@@ -416,13 +429,6 @@ article.storeItem {
 	div#innerContainer article.storeItem {
 		width: 420px !important;
 		background-color:red; /* debug */
-	}
-
-	.storeItemImage { 
-		display: inline-block; /* IE 9 FIX*/
-	}
-	.productDescription {
-		display: inline-block; /* IE 9 FIX*/
 	}
 
 	.productDescription {
