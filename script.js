@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 /* -- Focus all but IE < 11*/
+/*
 function msieversion() {
 
         var ua = window.navigator.userAgent;
@@ -10,13 +11,12 @@ function msieversion() {
          	var x = 0;
         else 
         	$("input[type='email']").focus(); 
-/*           	alert('otherbrowser'); */
 
    return false;
 }
 
 	msieversion();
-
+*/
 	
 
 	var signup = 0;
