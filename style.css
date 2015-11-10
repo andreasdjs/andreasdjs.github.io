@@ -68,7 +68,7 @@ nav ul li {
 }
 
 nav ul li:last-of-type { 
-	text-align: right; /* set width + align right to prevent horisontal jitter when adding items to shoppingbag */
+	text-align: right;	/* set width + align right to prevent horisontal jitter on nav bar when adding items to shoppingbag */
 	}
 
 nav ul li:first-of-type {
