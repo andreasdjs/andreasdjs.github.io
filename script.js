@@ -147,7 +147,7 @@ var shoppingBag = new Object();
 
 /* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
 
-
+/*
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
 			$(".advertisment").slideDown(); 
@@ -156,7 +156,7 @@ var shoppingBag = new Object();
 		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
 
-
+*/
 
 /* Thank you for your purchase! */
 /* Using .on() and class as parameter to select the modified DOM element */

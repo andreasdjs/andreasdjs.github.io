@@ -280,12 +280,11 @@ article.storeItem {
 	text-decoration: underline;
 }
 
-/* width */
-	.productDescription {
-	/*	width: 180px; */ 
-		width: 156px; /* width minus 4 + 4 padding */
-	}
-
+/* Set width */
+.productDescription {
+/*	width: 180px; */ 
+	width: 156px; /* width minus 4 + 4 padding */
+}
 
 /* ------------ About text styling ------------- */
 
@@ -353,8 +352,16 @@ article.storeItem {
 
 .itemsToCheckout {
 	color: #1FDE58;
-	font-weight: bold;
+/*	font-weight: bold; */
 }
+
+/* counter in fromnt of shopping bag nav item */
+.counter { 
+	width: 40px;
+	background-color: silver;
+	display:inline-block;
+}
+
 
 .checkout {
 	margin-top: 16px;
