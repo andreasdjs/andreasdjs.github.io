@@ -137,7 +137,7 @@ var shoppingBag = new Object();
 		event.preventDefault();		
 /*		console.log("click click"); */
 		$("article").remove();
-		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shoppingbag</h1></article>");
+		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
 /*		$("article").append("<p>Total: 1234 kr</p>") */
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
