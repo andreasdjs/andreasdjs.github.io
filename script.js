@@ -58,9 +58,30 @@ $(document).ready(function(){
 /* */
 
 var itemCounter = 0;
+var sum = 0;
+var storePriceInt = 0;
+/*
+var itemCounterObject = function(){
+	itemCounter =
+}*/
+
+function shoppingBag (item, price) {
+	this.item = item;
+	this.price = price;
+}
+
+myShoppingBag = new shoppingBag();
+
 
 
 	$(".buyButton").click(function (){
+		var storePrice = $(this).find(".price").text(); /* save text as string */
+		var storePriceInt = parseInt(storePrice); /* convert string to int */
+		sum += storePriceInt; /* sum */
+		console.log(storePrice);
+		console.log(storePriceInt);
+		console.log(sum); /* Shoppingbag sum */
+	
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
 		var itemCounterString = itemCounter.toString();
@@ -83,20 +104,18 @@ var itemCounter = 0;
 
 /* -- Show shopping bag-- */
 	$(".shoppingBag").click(function (event){
-		console.log("click click");
+		event.preventDefault();		
+/*		console.log("click click"); */
 		$("article").remove();
-		$("#innerContainer").html("<article><h1>Your shoppingbag</h1><p>Item</p><p>Item</p><p>Item</p></article>");
-	
-/*		$("article").append("<h1>Your shoppingbag</h1>");
-		$("#innerContainer").append("<p>Item</p><p>Item</p><p>Item</p><button>Checkout</button>"); */
-		$("article").append("<p>Item</p><p>Item</p><p>Item</p><p></p>");
-
-		$("article").append("<button class='button'>Check out</button>");
+		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shoppingbag</h1><p>Item 1</p><p>Item 2</p><p>Item 3</p></article>");
+		$("article").append("<p>Item 4</p><p>Item 5</p><p>Item 6</p><p></p>");
+		$("article").append("<p>Total: 1234 kr</p>")
+		$("article").append("<button class='button checkout'>Check out</button>");
 
 	});
 
 /* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
-/*
+
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
 			$(".advertisment").slideDown(); 
@@ -104,6 +123,19 @@ var itemCounter = 0;
 		}, 1500);
 		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
-*/
+
+/* Thank you for your purchase! */
+/* Using .on() and class as parameter to select the modified DOM element */
+
+	$("body").on("click", ".checkout", function() {
+		console.log("click click checkout");
+		$("article").remove();
+		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Thank you for choosing to buy from Melon-Citron.</h1><p>Your order is now being processed.</p></article>");		
+		/* hide shoppingBag items */
+		$(".counter").text("");
+		$(".shoppingBag").removeClass("itemsToCheckout");
+	});
+
+
 });
 

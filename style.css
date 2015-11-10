@@ -302,6 +302,10 @@ article.storeItem {
 		padding-right: 16px;
 	}
 
+	.mainArticleShoppingBag	{
+		padding-top:24px;
+	}
+
 /* ------------ Button  ------------- */
 /* - http://css3buttongenerator.com/ -*/
 
@@ -348,6 +352,11 @@ article.storeItem {
 .itemsToCheckout {
 	color: #1FDE58;
 	font-weight: bold;
+}
+
+.checkout {
+	margin-top: 16px;
+
 }
 
 /* -- Larger screen media query -- */
@@ -445,6 +454,11 @@ article.storeItem {
 		padding-left:40px;
 		padding-right:40px;
 	}
+/*
+	.mainArticleShoppingBag { 
+		padding-left: 24px;
+		padding-right: 24px;
+	} */
 	
 /* -- Making store items appear in two columns + layout -- */
 
