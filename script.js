@@ -65,28 +65,56 @@ var itemCounterObject = function(){
 	itemCounter =
 }*/
 
+
+/*
 function shoppingBag (item, price) {
 	this.item = item;
 	this.price = price;
+	function this.getSum()
 }
 
 myShoppingBag = new shoppingBag();
 
+*/
+/*
+var shoppingBag = function(input) {
+	var sum = input;
+	var returnSum = function() {
+		console.log(sum);
+	};
+};
+shoppingBag(200);
+shoppingBag.returnSum();
+*/
+
+/* Shopping bag object storing sum and items */
+
+var shoppingBag = new Object();
+	shoppingBag.sum = 0;
+	shoppingBag.numberOfItems = 0;
+	shoppingBag.items = [];
+	shoppingBag.getSum = function() { 
+		console.log("shoppingBag.getSum: " + shoppingBag.sum); 
+		return shoppingBag.sum;
+};
+
 
 
 	$(".buyButton").click(function (){
-		var storePrice = $(this).find(".price").text(); /* save text as string */
+		var storePrice = $(this).find(".price").text(); /* save text inside element as string */
 		var storePriceInt = parseInt(storePrice); /* convert string to int */
-		sum += storePriceInt; /* sum */
-		console.log(storePrice);
-		console.log(storePriceInt);
+		sum += storePriceInt; /* add to sum */
+//		console.log(storePrice); /* sum as string */
+		console.log(storePriceInt); /* sum converted to int */
 		console.log(sum); /* Shoppingbag sum */
-/*	debug counter
+		shoppingBag.sum = sum; /* set sum */ 
+		shoppingBag.getSum(); /* */
+
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
 		var itemCounterString = itemCounter.toString();
 		$(".counter").text("(" + itemCounter + ")");
-*/
+		shoppingBag.numberOfItems = itemCounter; /* Store itemCounter in object */
 
 /*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
 /*		    var animateIt = $(".itemsToCheckout");
@@ -109,14 +137,16 @@ myShoppingBag = new shoppingBag();
 		event.preventDefault();		
 /*		console.log("click click"); */
 		$("article").remove();
-		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shoppingbag</h1><p>Item 1</p><p>Item 2</p><p>Item 3</p></article>");
-		$("article").append("<p>Item 4</p><p>Item 5</p><p>Item 6</p><p></p>");
-		$("article").append("<p>Total: 1234 kr</p>")
+		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shoppingbag</h1></article>");
+		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
+/*		$("article").append("<p>Total: 1234 kr</p>") */
+		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
 		$("article").append("<button class='button checkout'>Check out</button>");
 
 	});
 
 /* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
+
 
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
@@ -125,6 +155,8 @@ myShoppingBag = new shoppingBag();
 		}, 1500);
 		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
+
+
 
 /* Thank you for your purchase! */
 /* Using .on() and class as parameter to select the modified DOM element */
