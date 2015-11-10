@@ -161,7 +161,7 @@ console.log(shoppingBag.productName); /* check items */
 
 		for(var i in shoppingBag.price) {
 /*     		 console.log("Loopindexprice:" + shoppingBag.price[i]); */
-    		$("article").append("<p>" + shoppingBag.productName[i] + " " + shoppingBag.price[i] + " kr</p>");
+    		$("article").append("<p>" + shoppingBag.productName[i] + ": " + shoppingBag.price[i] + " kr</p>");
 
 		}
 

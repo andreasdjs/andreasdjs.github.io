@@ -359,6 +359,9 @@ article.storeItem {
 	color: #1FDE58;
 	font-weight: bold; 
 }
+a:hover.itemsToCheckout {
+	color: #2FEE68;
+}
 
 /* counter in front of shopping bag nav item */
 .counter { 
