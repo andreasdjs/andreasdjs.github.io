@@ -92,6 +92,8 @@ myShoppingBag = new shoppingBag();
 /*		    var animateIt = $(".itemsToCheckout");
 		    animateIt.animate({fontSize: '17px'}, 30);
  		    animateIt.animate({fontSize: '16px'}, 80); */
+ 		console.log("animate it?");
+
  /*
 
       $( ".itemsToCheckOut" ).animate({
