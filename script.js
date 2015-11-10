@@ -15,6 +15,11 @@ $(document).ready(function(){
 /* -- Switch Sign-in / Sign-up for usability-- */	
 
 	var signup = 0;
+
+var signinSignupSwitch = new Object();
+signinSignupSwitch.signup = 0;
+
+
 	$(".signup").click(function (event){
 		if (signup === 0) {
 			event.preventDefault();
@@ -25,6 +30,9 @@ $(document).ready(function(){
 			$(".submit").fadeIn().before("<input type='username' placeholder='Username'/>").prev().hide().fadeIn("fast");
 		*/
 			signup = 1;
+			signinSignupSwitch.signup = 1;
+			console.log(signinSignupSwitch.signup);
+
 			$(".signin").remove();
 			$(".signup").after("<button class='signin'>or <span class='switchLoginMethod'>Sign-In</span></button>");
 
@@ -37,20 +45,38 @@ $(document).ready(function(){
 		}
 	});
 
-	$(".signin").click(function (event){
-		if (signup === 1) {
+	$("body").on("click", ".signin", function (event){
+		console.log("click .signin");
+
+		if (signinSignupSwitch.signup === 1) {
 			event.preventDefault();
+			console.log("click .signin");
 //			$(".signin").before("<input type='name' placeholder='Firstname and lastname'>");
 //			$("input:first-of-type").before("<input type='name' placeholder='Firstname and lastname'>");
 
 /*
 			$(".submit").fadeIn().before("<input type='username' placeholder='Username'/>").prev().hide().fadeIn("fast");
 		*/
-			signup = 1;
-			$(".signin").remove();
-			$(".signup").after("<button class='signin'>Sign-In</button>");
+			signup = 0;
+			signinSignupSwitch.signup = 0;
+			console.log(signinSignupSwitch.signup);
 
-			$(".signup").addClass("selected button"); 
+			$("input[type='name']").remove();
+			$(".signup").remove();
+
+			$(".signin").after("<button class='signup'>or <span class='switchLoginMethod'>Sign-Up</span></button>");
+
+			$(".signin").addClass("selected button");
+			$(".signin").html("Sign-In");
+			
+			$("input[type='email']").focus(); /* focus Firstname and lastname */ 
+
+
+/*
+
+			$(".signin").after("<button class='signup'>Sign-Up</button>");
+
+			$(".signup").addClass("selected button"); */
 /*			$(".signin").removeClass("selected"); */
 		}
 	});
