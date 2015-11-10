@@ -89,9 +89,9 @@ myShoppingBag = new shoppingBag();
 /*		$(".counter").text("(1)"); */
 
 /*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
-		    var animateIt = $(".itemsToCheckout");
+/*		    var animateIt = $(".itemsToCheckout");
 		    animateIt.animate({fontSize: '17px'}, 30);
- 		    animateIt.animate({fontSize: '16px'}, 80);
+ 		    animateIt.animate({fontSize: '16px'}, 80); */
  /*
 
       $( ".itemsToCheckOut" ).animate({
