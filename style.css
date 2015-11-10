@@ -60,7 +60,19 @@ nav ul {
 nav ul li {
 	line-height: 60px;
 	padding-left: 0px;
+	padding-right: 0px;
+	width: 120px;
+	text-align: center;
+/*	background-color:red;  */
 	display: inline-block; /* horisontal position */
+}
+
+nav ul li:last-of-type { 
+	text-align: right; /* set width + align right to prevent horisontal jitter when adding items to shoppingbag */
+	}
+
+nav ul li:first-of-type {
+	text-align: left;
 }
 
 nav ul li a {
