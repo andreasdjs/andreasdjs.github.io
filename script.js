@@ -57,9 +57,16 @@ $(document).ready(function(){
 
 /* */
 
+var itemCounter = 0;
+
+
 	$(".buyButton").click(function (){
 		$(".shoppingBag").addClass("itemsToCheckout");
-		$(".counter").text("(1)");
+		itemCounter += 1;
+		var itemCounterString = itemCounter.toString();
+		$(".counter").text("(" + itemCounter + ")");
+/*		$(".counter").text("(1)"); */
+
 /*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
 		    var animateIt = $(".itemsToCheckout");
 		    animateIt.animate({fontSize: '17px'}, 30);
@@ -71,6 +78,7 @@ $(document).ready(function(){
           color: "#fff"
         }, 1000 );*/
 	});
+
 
 
 /* -- Show shopping bag-- */
