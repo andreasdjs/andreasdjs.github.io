@@ -69,6 +69,7 @@ nav ul li {
 
 nav ul li:last-of-type { 
 	text-align: right;	/* set width + align right to prevent horisontal jitter on nav bar when adding items to shoppingbag */
+/*	padding-left:0px; */
 	}
 
 nav ul li:first-of-type {
@@ -81,8 +82,12 @@ nav ul li a {
 	padding-right: 20px;
 	text-decoration: none;
 	color: black;
+	width: 130px;
 }
 
+nav ul li a.shoppingBag { 
+	padding-left: 0px;
+}
 
 /* -- Paint it black! -- */
 
