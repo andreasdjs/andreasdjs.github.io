@@ -63,7 +63,7 @@ nav ul li {
 	padding-right: 0px;
 	width: 140px;
 	text-align: center;
-/*	background-color:red;  */
+	background-color:grey;  
 	display: inline-block; /* horisontal position */
 }
 
