@@ -61,15 +61,14 @@ nav ul li {
 	line-height: 60px;
 	padding-left: 0px;
 	padding-right: 0px;
-	width: 106px;
+	width: 106px; /* iphone width / 3 (remainder 2 px) */
 	text-align: center;
-	background-color:grey;  
+/*	background-color:grey;  used for debug size */
 	display: inline-block; /* horisontal position */
 }
 
 nav ul li:last-of-type { 
 	text-align: right;	/* set width + align right to prevent horisontal jitter on nav bar when adding items to shoppingbag */
-/*	padding-left:0px; */
 	}
 
 nav ul li:first-of-type {
@@ -86,7 +85,7 @@ nav ul li a {
 }
 
 nav ul li a.shoppingBag { 
-	padding-left: 0px;
+	padding-left: 0px; /* reduce width on left side to make space for counter */
 }
 
 /* -- Paint it black! -- */
@@ -355,15 +354,16 @@ article.storeItem {
 
 }
 
+/* Number of items ot checkout. Shows in front of shoppingbag */
 .itemsToCheckout {
 	color: #1FDE58;
-/*	font-weight: bold; */
+	font-weight: bold; 
 }
 
-/* counter in fromnt of shopping bag nav item */
+/* counter in front of shopping bag nav item */
 .counter { 
 	width: 30px;
-	background-color: silver;
+/*	background-color: silver; */
 	display:inline-block;
 }
 
