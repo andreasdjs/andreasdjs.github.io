@@ -81,12 +81,12 @@ myShoppingBag = new shoppingBag();
 		console.log(storePrice);
 		console.log(storePriceInt);
 		console.log(sum); /* Shoppingbag sum */
-	
+/*	debug counter
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
 		var itemCounterString = itemCounter.toString();
 		$(".counter").text("(" + itemCounter + ")");
-/*		$(".counter").text("(1)"); */
+*/
 
 /*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
 /*		    var animateIt = $(".itemsToCheckout");
