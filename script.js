@@ -90,17 +90,24 @@ shoppingBag.returnSum();
 /* Shopping bag object storing sum and items */
 
 var shoppingBag = new Object();
-	shoppingBag.sum = 0;
-	shoppingBag.numberOfItems = 0;
-	shoppingBag.items = [];
-	shoppingBag.getSum = function() { 
-		console.log("shoppingBag.getSum: " + shoppingBag.sum); 
+shoppingBag.sum = 0;
+shoppingBag.numberOfItems = 0;
+shoppingBag.price = [];
+/*shoppingBag.itemAndPrice = [[],[]]; */
+shoppingBag.productName = [];
+shoppingBag.getSum = function() { 
+	console.log("shoppingBag.getSum: " + shoppingBag.sum); 
 		return shoppingBag.sum;
 };
+
+console.log(shoppingBag.price); /* check items */
+console.log(shoppingBag.productName); /* check items */
 
 
 
 	$(".buyButton").click(function (){
+		var productName = $(this).parent().parent().find("h3").text(); /* vad heter produkten? */
+		console.log(productName);
 		var storePrice = $(this).find(".price").text(); /* save text inside element as string */
 		var storePriceInt = parseInt(storePrice); /* convert string to int */
 		sum += storePriceInt; /* add to sum */
@@ -115,6 +122,13 @@ var shoppingBag = new Object();
 		var itemCounterString = itemCounter.toString();
 		$(".counter").text("(" + itemCounter + ")");
 		shoppingBag.numberOfItems = itemCounter; /* Store itemCounter in object */
+
+		shoppingBag.price.push(storePriceInt); /* Store item price in array */
+		shoppingBag.productName.push(productName);
+		console.log("Added to shoppingbag\n" + productName + "\nPrice: " + storePrice + " kr");
+
+		/* shoppingBag.items.push(storePriceInt); */
+		/* Store item price to array */
 
 /*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
 /*		    var animateIt = $(".itemsToCheckout");
@@ -136,8 +150,21 @@ var shoppingBag = new Object();
 	$(".shoppingBag").click(function (event){
 		event.preventDefault();		
 /*		console.log("click click"); */
+
+		console.log("loop index");
+		for(var i in shoppingBag.price) {
+     		 console.log("Loopindexprice:" + shoppingBag.price[i]);
+		}
+
 		$("article").remove();
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
+
+		for(var i in shoppingBag.price) {
+/*     		 console.log("Loopindexprice:" + shoppingBag.price[i]); */
+    		$("article").append("<p>" + shoppingBag.productName[i] + " " + shoppingBag.price[i] + " kr</p>");
+
+		}
+
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
 /*		$("article").append("<p>Total: 1234 kr</p>") */
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
