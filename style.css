@@ -200,7 +200,6 @@ button {
 	padding:8px;
 }
 
-
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
@@ -289,6 +288,28 @@ article.storeItem {
 /*	width: 180px; */ 
 	width: 156px; /* width minus 4 + 4 padding */
 }
+
+.mainArticleShoppingBag h1 {
+	margin-bottom: 16px;
+}
+
+table, tr, td { 
+	border-collapse: collapse;
+	border: 0;
+}
+
+tr:nth-child(odd) {
+	background-color: #e0e0e0;
+}
+
+tr:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+td {
+	padding:16px;
+}
+
 
 /* ------------ About text styling ------------- */
 

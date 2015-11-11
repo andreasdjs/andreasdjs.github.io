@@ -115,12 +115,21 @@ $(document).ready(function(){
      		 console.log("Loopindexprice:" + shoppingBag.price[i]);
 		}
 
-		$("article").remove();
+		$("article").remove(); // clean page
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
 
+/*
 		for(var i in shoppingBag.price) {
     		$("article").append("<p>" + shoppingBag.productName[i] + ": " + shoppingBag.price[i] + " kr</p>");
+		} */
+		
+		/* Add table */
+		
+		for(var i in shoppingBag.price) {
+    		$("article").append("<tr><td>" + shoppingBag.productName[i] + "</td><td>" + shoppingBag.price[i] + " kr</td></tr>");
 		}
+			$("tr").wrapAll("<table></table>");
+
 
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
