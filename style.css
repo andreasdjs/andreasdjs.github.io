@@ -307,7 +307,9 @@ tr:nth-child(even) {
 }
 
 td {
-	padding:16px;
+	padding: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 
