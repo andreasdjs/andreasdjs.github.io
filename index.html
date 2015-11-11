@@ -15,17 +15,16 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 	<!-- Ladda: jQuery, jQuery UI, JavaScript-fil, Google Fonts, CSS-fil. -->
-	<!--
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="script.js"></script> -->
+	<script src="script.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<div id="loginContainer">
 		<header><h1 class="logo">Melon-Citron</h1></header>
-		<div id="innerLoginContainer">abcd
+		<div id="innerLoginContainer">
 			<form action="store.html" method="get">
 				<input type="email" placeholder="E-mail" required/>
 				<input type="password" placeholder="Password" required/>
@@ -33,12 +32,13 @@
 				<button class="signup">or <span class="switchLoginMethod">Sign-Up</span></button>
 			</form>
 		</div>
-	</div><!-- debug
+	</div>
+	<!-- Placeholder text in forms hack for IE for usability, because of no labels -->
 		<script src="jquery.placeholder.js"></script>
 		<script>
 			$(function() {
 				$('input, textarea').placeholder({customClass:'my-placeholder'});
 			});
-		</script>	-->
+		</script>
 </body>
 </html>

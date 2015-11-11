@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-/* -- Focus all but IE < 11 because placeholder won't be visible otherwise	*/
+	/* -- Focus all but IE < 11 because placeholder text won't be visible otherwise	*/
+
 	function defocusInputForIE() {
         var ua = window.navigator.userAgent;
         var msie = ua.indexOf("MSIE "); 
@@ -10,26 +11,19 @@ $(document).ready(function(){
         	$("input[type='email']").focus(); // Focus input field email
 	   return false;
 	}
-	defocusInputForIE();
+	defocusInputForIE(); 
 
-/* -- Switch Sign-in / Sign-up for usability-- */	
+	/* -- Switch Sign-in / Sign-up for usability-- */	
 
-	var signup = 0;
-
-var signinSignupSwitch = new Object();
-signinSignupSwitch.signup = 0;
+	var signinSignupSwitch = new Object(); // Object to store state
+	signinSignupSwitch.signup = 0;
 
 
 	$(".signup").click(function (event){
-		if (signup === 0) {
+		if (signinSignupSwitch.signup === 0) {
 			event.preventDefault();
-//			$(".signin").before("<input type='name' placeholder='Firstname and lastname'>");
 			$("input:first-of-type").before("<input type='name' placeholder='Firstname and lastname' required>");
 
-/*
-			$(".submit").fadeIn().before("<input type='username' placeholder='Username'/>").prev().hide().fadeIn("fast");
-		*/
-			signup = 1;
 			signinSignupSwitch.signup = 1;
 			console.log(signinSignupSwitch.signup);
 
@@ -40,8 +34,6 @@ signinSignupSwitch.signup = 0;
 			$(".signup").html("Sign-Up");
 			
 			$("input[type='name']").focus(); /* focus Firstname and lastname */ 
-
-/*			$(".signin").removeClass("selected"); */
 		}
 	});
 
@@ -51,13 +43,7 @@ signinSignupSwitch.signup = 0;
 		if (signinSignupSwitch.signup === 1) {
 			event.preventDefault();
 			console.log("click .signin");
-//			$(".signin").before("<input type='name' placeholder='Firstname and lastname'>");
-//			$("input:first-of-type").before("<input type='name' placeholder='Firstname and lastname'>");
 
-/*
-			$(".submit").fadeIn().before("<input type='username' placeholder='Username'/>").prev().hide().fadeIn("fast");
-		*/
-			signup = 0;
 			signinSignupSwitch.signup = 0;
 			console.log(signinSignupSwitch.signup);
 
@@ -70,64 +56,30 @@ signinSignupSwitch.signup = 0;
 			$(".signin").html("Sign-In");
 			
 			$("input[type='email']").focus(); /* focus Firstname and lastname */ 
-
-
-/*
-
-			$(".signin").after("<button class='signup'>Sign-Up</button>");
-
-			$(".signup").addClass("selected button"); */
-/*			$(".signin").removeClass("selected"); */
 		}
 	});
 
-/* */
+	/* */
 
-var itemCounter = 0;
-var sum = 0;
-var storePriceInt = 0;
-/*
-var itemCounterObject = function(){
-	itemCounter =
-}*/
+	var itemCounter = 0;
+	var sum = 0;
+	var storePriceInt = 0;
 
+	/* Shopping bag object storing sum and items */
 
-/*
-function shoppingBag (item, price) {
-	this.item = item;
-	this.price = price;
-	function this.getSum()
-}
-
-myShoppingBag = new shoppingBag();
-
-*/
-/*
-var shoppingBag = function(input) {
-	var sum = input;
-	var returnSum = function() {
-		console.log(sum);
+	var shoppingBag = new Object();
+	shoppingBag.sum = 0;
+	shoppingBag.numberOfItems = 0;
+	shoppingBag.price = [];
+	/*shoppingBag.itemAndPrice = [[],[]]; */
+	shoppingBag.productName = [];
+	shoppingBag.getSum = function() { 
+		console.log("shoppingBag.getSum: " + shoppingBag.sum); 
+			return shoppingBag.sum;
 	};
-};
-shoppingBag(200);
-shoppingBag.returnSum();
-*/
 
-/* Shopping bag object storing sum and items */
-
-var shoppingBag = new Object();
-shoppingBag.sum = 0;
-shoppingBag.numberOfItems = 0;
-shoppingBag.price = [];
-/*shoppingBag.itemAndPrice = [[],[]]; */
-shoppingBag.productName = [];
-shoppingBag.getSum = function() { 
-	console.log("shoppingBag.getSum: " + shoppingBag.sum); 
-		return shoppingBag.sum;
-};
-
-console.log(shoppingBag.price); /* check items */
-console.log(shoppingBag.productName); /* check items */
+	console.log(shoppingBag.price); /* check items */
+	console.log(shoppingBag.productName); /* check items */
 
 
 
@@ -137,7 +89,6 @@ console.log(shoppingBag.productName); /* check items */
 		var storePrice = $(this).find(".price").text(); /* save text inside element as string */
 		var storePriceInt = parseInt(storePrice); /* convert string to int */
 		sum += storePriceInt; /* add to sum */
-//		console.log(storePrice); /* sum as string */
 		console.log(storePriceInt); /* sum converted to int */
 		console.log(sum); /* Shoppingbag sum */
 		shoppingBag.sum = sum; /* set sum */ 
@@ -152,30 +103,12 @@ console.log(shoppingBag.productName); /* check items */
 		shoppingBag.price.push(storePriceInt); /* Store item price in array */
 		shoppingBag.productName.push(productName);
 		console.log("Added to shoppingbag\n" + productName + "\nPrice: " + storePrice + " kr");
-
-		/* shoppingBag.items.push(storePriceInt); */
-		/* Store item price to array */
-
-/*		$(this).find("itemsToCheckout").animate({'color': '#ffffff'}, 'normal'); */
-/*		    var animateIt = $(".itemsToCheckout");
-		    animateIt.animate({fontSize: '17px'}, 30);
- 		    animateIt.animate({fontSize: '16px'}, 80); */
- 		console.log("animate it?");
-
- /*
-
-      $( ".itemsToCheckOut" ).animate({
-          backgroundColor: "#aa0000",
-          color: "#fff"
-        }, 1000 );*/
 	});
 
+	/* -- Show shopping bag-- */
 
-
-/* -- Show shopping bag-- */
 	$(".shoppingBag").click(function (event){
 		event.preventDefault();		
-/*		console.log("click click"); */
 
 		console.log("loop index");
 		for(var i in shoppingBag.price) {
@@ -186,20 +119,16 @@ console.log(shoppingBag.productName); /* check items */
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
 
 		for(var i in shoppingBag.price) {
-/*     		 console.log("Loopindexprice:" + shoppingBag.price[i]); */
     		$("article").append("<p>" + shoppingBag.productName[i] + ": " + shoppingBag.price[i] + " kr</p>");
-
 		}
 
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
-/*		$("article").append("<p>Total: 1234 kr</p>") */
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
 		$("article").append("<button class='button checkout'>Check out</button>");
 
 	});
 
-/* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
-
+	/* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
 
 	$(".innerContainerStore").one("click", function(){
 		setTimeout(function(){
@@ -209,9 +138,8 @@ console.log(shoppingBag.productName); /* check items */
 		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
 
-
-/* Thank you for your purchase! */
-/* Using .on() and class as parameter to select the modified DOM element */
+	/* Thank you for your purchase! */
+	/* Using .on() and class as parameter to select the modified DOM element */
 
 	$("body").on("click", ".checkout", function() {
 		console.log("click click checkout");
@@ -221,7 +149,6 @@ console.log(shoppingBag.productName); /* check items */
 		$(".counter").text("");
 		$(".shoppingBag").removeClass("itemsToCheckout");
 	});
-
 
 });
 
