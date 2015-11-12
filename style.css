@@ -133,7 +133,14 @@ article {
 
 }
 
-/* reset margins */
+footer { 
+	margin-top: 18px;
+	font-size: 10px;
+	font-style: italic;
+}
+
+/* Reset margins */
+
 h1 { 
 	margin: 0;
 }
