@@ -18,7 +18,6 @@ $(document).ready(function(){
 	var signinSignupSwitch = new Object(); // Object to store state
 	signinSignupSwitch.signup = 0;
 
-
 	$(".signup").click(function (event){
 		if (signinSignupSwitch.signup === 0) {
 			event.preventDefault();
@@ -71,17 +70,14 @@ $(document).ready(function(){
 	shoppingBag.sum = 0;
 	shoppingBag.numberOfItems = 0;
 	shoppingBag.price = [];
-	/*shoppingBag.itemAndPrice = [[],[]]; */
 	shoppingBag.productName = [];
 	shoppingBag.getSum = function() { 
 		console.log("shoppingBag.getSum: " + shoppingBag.sum); 
 			return shoppingBag.sum;
 	};
 
-	console.log(shoppingBag.price); /* check items */
-	console.log(shoppingBag.productName); /* check items */
-
-
+	console.log(shoppingBag.price); /* Debug item price */
+	console.log(shoppingBag.productName); /* Debug item product name*/
 
 	$(".buyButton").click(function (){
 		var productName = $(this).parent().parent().find("h3").text(); /* vad heter produkten? */
@@ -92,7 +88,7 @@ $(document).ready(function(){
 		console.log(storePriceInt); /* sum converted to int */
 		console.log(sum); /* Shoppingbag sum */
 		shoppingBag.sum = sum; /* set sum */ 
-		shoppingBag.getSum(); /* */
+/*		shoppingBag.getSum(); */
 
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
@@ -117,19 +113,12 @@ $(document).ready(function(){
 
 		$("article").remove(); // clean page
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
-
-/*
-		for(var i in shoppingBag.price) {
-    		$("article").append("<p>" + shoppingBag.productName[i] + ": " + shoppingBag.price[i] + " kr</p>");
-		} */
-		
-		/* Add table */
 		
 		for(var i in shoppingBag.price) {
     		$("article").append("<tr><td>" + shoppingBag.productName[i] + "</td><td>" + shoppingBag.price[i] + " kr</td></tr>");
 		}
-			$("tr").wrapAll("<table></table>");
-
+		
+		$("tr").wrapAll("<table></table>");
 
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
@@ -147,14 +136,14 @@ $(document).ready(function(){
 		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
 
-	/* Thank you for your purchase! */
-	/* Using .on() and class as parameter to select the modified DOM element */
+	/* Thank you for your purchase! Using .on() and class
+	   as parameter to select the modified DOM element.   */
 
 	$("body").on("click", ".checkout", function() {
 		console.log("click click checkout");
 		$("article").remove();
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Thank you for choosing to buy from Melon-Citron.</h1><p>Your order is now being processed.</p></article>");		
-		/* hide shoppingBag items */
+		/* Hide shoppingBag items */
 		$(".counter").text("");
 		$(".shoppingBag").removeClass("itemsToCheckout");
 	});
