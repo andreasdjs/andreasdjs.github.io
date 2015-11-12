@@ -484,18 +484,34 @@ a:hover.itemsToCheckout {
 		float:left;
 		display: inline-block;
 		height:100px;
-/*		line-height:100px;*/
 	}
-
+/* destroyed safari and Opera 
 	.cf:before,
 	.cf:after {
-	    content: " "; /* 1 */
-	    display: table; /* 2 */
+	    content: " "; 
+	    display: table; 
 	}
 
 	.cf:after {
 	    clear: both;
 	}
+*/
+/* Longer clear fix from CSS TRicks */
+
+	.cf:after {
+	     visibility: hidden;
+	     display: block;
+	     font-size: 0;
+	     content: " ";
+	     clear: both;
+	     height: 0;
+	     }
+	.cf { display: inline-block; }
+	/* start commented backslash hack \*/
+	* html .cf { height: 1%; }
+	.cf { display: block; }
+	/* close commented backslash hack */
+
 
 
 	/* -- Two columns -- */
@@ -567,7 +583,7 @@ a:hover.itemsToCheckout {
 		top:0;
 		left:0;
 		background-color: white;*/
-		font-size: 72px;
+		font-size: 72px; /* Bigger font for larger screens */
 /*		font-weight:800;
 		z-index:1000; *//* On top of everything */
 	}
