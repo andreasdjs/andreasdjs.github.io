@@ -127,7 +127,10 @@ nav ul li a:hover {
 	padding-top:20px;
 }
 
-button { margin-top: 4px; marign-bottom: 4px;}
+button { 
+	margin-top: 4px; 
+	margin-bottom: 4px;
+}
 
 article {
 
@@ -221,24 +224,24 @@ article.storeItem {
 	width: 100px;
 	height: 100px;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
+/*
+	background: #feffff; 
+	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); 
+	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
+	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
+	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
+	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );
+*/
 	background: #feffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */
-
-	background: #feffff; /* Old browsers */
-	background: -moz-radial-gradient(top,  #feffff 0%, #d2ebf9 100%); /* FF3.6+ */
-	background: -webkit-radial(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); /* Opera 11.10+ */
-	background: -ms-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); /* IE10+ */
-	background: radial-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); /* W3C */
+	background: -moz-radial-gradient(top,  #feffff 0%, #d2ebf9 100%); 
+	background: -webkit-radial(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); 
+	background: -webkit-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); 
+	background: -o-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); 
+	background: -ms-radial-gradient(top,  #feffff 0%,#d2ebf9 100%);
+	background: radial-gradient(to bottom,  #feffff 0%,#d2ebf9 100%);
 	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
-	/*	filter: 	progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 ); /* IE6-9 */ */
 }
 
 .addToShoppingBag {
