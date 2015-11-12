@@ -33,6 +33,7 @@ $(document).ready(function(){
 			$(".signup").html("Sign-Up");
 			
 			$("input[type='name']").focus(); /* focus Firstname and lastname */ 
+			defocusInputForIE(); /* Blur for IE */
 		}
 	});
 
@@ -55,6 +56,7 @@ $(document).ready(function(){
 			$(".signin").html("Sign-In");
 			
 			$("input[type='email']").focus(); /* focus Firstname and lastname */ 
+			defocusInputForIE(); /* Blur for IE */
 		}
 	});
 

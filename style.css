@@ -3,6 +3,8 @@
 
 html
 {
+	/* Note: vendor specific experimental implementations doesn't validate in CSS Validator */
+
 	background-color:   #0176A0;
 	background-image:   -moz-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
 	background-image:   -webkit-radial-gradient(center, ellipse cover, #029CC9 0%, #005077 100%);
@@ -223,44 +225,13 @@ article.storeItem {
 .storeItemImage {
 	width: 100px;
 	height: 100px;
+
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feffff+0,d2ebf9+100;Blue+3D+%2312 */
-/*
-	background: #feffff; 
-	background: -moz-linear-gradient(top,  #feffff 0%, #d2ebf9 100%); 
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); 
-	background: -webkit-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
-	background: -o-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
-	background: -ms-linear-gradient(top,  #feffff 0%,#d2ebf9 100%); 
-	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );
-*/
-/*
 	background: #feffff;
-	background: -moz-radial-gradient(top,  #feffff 0%, #d2ebf9 100%); 
-	background: -webkit-radial(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); 
-	background: -webkit-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); 
-	background: -o-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); 
-	background: -ms-radial-gradient(top,  #feffff 0%,#d2ebf9 100%);
-	background: radial-gradient(to bottom,  #feffff 0%,#d2ebf9 100%);
-	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
-*/
-
-/*
-	background-color:   #feffff;
-	background-image:   -moz-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
-	background-image:   -webkit-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
-	background-image:   -o-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
-	background-image:   -ms-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
-	background-image:   radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
-	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#feffff', endColorstr = '#d2ebf9', GradientType = 0);
-*/
-background: #feffff;
-background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #d2ebf9 100%);
-background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#d2ebf9 100%);
-background: radial-gradient(ellipse at center,  #feffff 0%,#d2ebf9 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 );
-
-
+	background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #d2ebf9 100%);
+	background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#d2ebf9 100%);
+	background: radial-gradient(ellipse at center,  #feffff 0%,#d2ebf9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 );
 }
 
 .addToShoppingBag {
