@@ -76,9 +76,6 @@ $(document).ready(function(){
 			return shoppingBag.sum;
 	};
 
-	console.log(shoppingBag.price); /* Debug item price */
-	console.log(shoppingBag.productName); /* Debug item product name*/
-
 	$(".buyButton").click(function (){
 		var productName = $(this).parent().parent().find("h3").text(); /* vad heter produkten? */
 		console.log(productName);
@@ -88,7 +85,6 @@ $(document).ready(function(){
 		console.log(storePriceInt); /* sum converted to int */
 		console.log(sum); /* Shoppingbag sum */
 		shoppingBag.sum = sum; /* set sum */ 
-/*		shoppingBag.getSum(); */
 
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
