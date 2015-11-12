@@ -234,7 +234,8 @@ article.storeItem {
 	background: linear-gradient(to bottom,  #feffff 0%,#d2ebf9 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=0 );
 */
-	background: #feffff; /* Old browsers */
+/*
+	background: #feffff;
 	background: -moz-radial-gradient(top,  #feffff 0%, #d2ebf9 100%); 
 	background: -webkit-radial(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(100%,#d2ebf9)); 
 	background: -webkit-radial-gradient(top,  #feffff 0%,#d2ebf9 100%); 
@@ -242,6 +243,14 @@ article.storeItem {
 	background: -ms-radial-gradient(top,  #feffff 0%,#d2ebf9 100%);
 	background: radial-gradient(to bottom,  #feffff 0%,#d2ebf9 100%);
 	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
+*/
+	background-color:   #feffff;
+	background-image:   -moz-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+	background-image:   -webkit-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+	background-image:   -o-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+	background-image:   -ms-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+	background-image:   radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
+	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#feffff', endColorstr = '#d2ebf9', GradientType = 0);
 }
 
 .addToShoppingBag {
