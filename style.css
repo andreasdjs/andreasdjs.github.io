@@ -244,6 +244,8 @@ article.storeItem {
 	background: radial-gradient(to bottom,  #feffff 0%,#d2ebf9 100%);
 	filter:     progid:DXImageTransform.Microsoft.gradient(startColorstr = '#029CC9', endColorstr = '#005077', GradientType = 0);
 */
+
+/*
 	background-color:   #feffff;
 	background-image:   -moz-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
 	background-image:   -webkit-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
@@ -251,6 +253,14 @@ article.storeItem {
 	background-image:   -ms-radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
 	background-image:   radial-gradient(center, ellipse cover, #feffff 0%, #d2ebf9 100%);
 	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '#feffff', endColorstr = '#d2ebf9', GradientType = 0);
+*/
+background: #feffff;
+background: -moz-radial-gradient(center, ellipse cover,  #feffff 0%, #d2ebf9 100%);
+background: -webkit-radial-gradient(center, ellipse cover,  #feffff 0%,#d2ebf9 100%);
+background: radial-gradient(ellipse at center,  #feffff 0%,#d2ebf9 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#d2ebf9',GradientType=1 );
+
+
 }
 
 .addToShoppingBag {
