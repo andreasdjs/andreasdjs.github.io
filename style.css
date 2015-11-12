@@ -538,6 +538,7 @@ a:hover.itemsToCheckout {
 	}
 
 	div#innerContainer article.storeItem {
+		float: left;
 		width: 420px !important;
 	}
 
