@@ -32,6 +32,8 @@ $(document).ready(function(){
 			// Switch button text
 			$(".signup").html("Sign-Up");
 			// If IE or IE11, defocus all input fields
+			var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf("MSIE "); 
 	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 				$("body").blur();
 	        } else {
@@ -39,6 +41,7 @@ $(document).ready(function(){
 	        	console.log("focus");
 			}
 			signinSignupSwitch.signup = 1;
+			console.log(signinSignupSwitch.signup);
 		}
 	});
 
@@ -57,6 +60,8 @@ $(document).ready(function(){
 			// Switch button text
 			$(".signin").html("Sign-In");
 			// If IE or IE11, defocus all input fields
+			var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf("MSIE "); 
 	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 				$("body").blur();
 	        } else {
@@ -64,6 +69,7 @@ $(document).ready(function(){
 				console.log("focus");
 	        }
    			signinSignupSwitch.signup = 0;
+			console.log(signinSignupSwitch.signup);   			
 		}
 	});
 
