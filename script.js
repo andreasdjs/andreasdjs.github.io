@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-	/* -- Focus all but IE < 11 because placeholder text won't be visible otherwise	*/
+	/* -- Focus on email input field for all but IE < 12, because placeholder text won't be visible otherwise. */
 
 	function defocusInputForIE() {
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE "); 
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, do nothing.
+        var ua = window.navigator.userAgent; // Get User-Agent.
+        var msie = ua.indexOf("MSIE ");  // Search for IE string
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If IE or IE11
          	var x = 0; /* dummy code*/
         else 
         	$("input[type='email']").focus(); // Focus input field email
@@ -38,10 +38,8 @@ $(document).ready(function(){
 				$("body").blur();
 	        } else {
 	        	$("input[type='name']").focus(); /* Focus Firstname and lastname */ 
-	        	console.log("focus");
 			}
 			signinSignupSwitch.signup = 1;
-			console.log(signinSignupSwitch.signup);
 		}
 	});
 
@@ -66,10 +64,8 @@ $(document).ready(function(){
 				$("body").blur();
 	        } else {
 				$("input[type='email']").focus(); /* focus Firstname and lastname */ 
-				console.log("focus");
 	        }
    			signinSignupSwitch.signup = 0;
-			console.log(signinSignupSwitch.signup);   			
 		}
 	});
 
@@ -128,7 +124,6 @@ $(document).ready(function(){
 			$(".advertisment").slideDown(); 
 			$(".advertisment").delay(3000).fadeOut();
 		}, 1500);
-		console.log("did it fire?"); // Yes, it did fire, after disabling Ad-Block. 
 	});
 
 	/* Thank you for your purchase! Using .on() and class
