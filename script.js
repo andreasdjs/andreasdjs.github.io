@@ -18,52 +18,56 @@ $(document).ready(function(){
 	var signinSignupSwitch = new Object(); // Object to store state
 	signinSignupSwitch.signup = 0;
 
-	$(".signup").click(function (event){
+
+	$("body").on("click", ".signup", function (event){
+//	$(".signup").click(function (event){
 		if (signinSignupSwitch.signup === 0) {
 			event.preventDefault();
+			// Add inputfield
 			$("input:first-of-type").before("<input type='name' placeholder='Firstname and lastname' required>");
-
-			signinSignupSwitch.signup = 1;
-			console.log(signinSignupSwitch.signup);
-
+			// Remove Signin button
 			$(".signin").remove();
+			// Add new switch-button
 			$(".signup").after("<button class='signin'>or <span class='switchLoginMethod'>Sign-In</span></button>");
-
+			// Set switch button class
 			$(".signup").addClass("selected button");
+			// Switch button text
 			$(".signup").html("Sign-Up");
-			
-			$("input[type='name']").focus(); /* focus Firstname and lastname */ 
-			defocusInputForIE(); /* Blur for IE */
+			$("input[type='name']").focus(); /* Focus Firstname and lastname */ 
+			signinSignupSwitch.signup = 1;
+			// If IE or IE11, defocus all input fields
+	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+				$("body").blur();
+	        }
 		}
 	});
 
 	$("body").on("click", ".signin", function (event){
-		console.log("click .signin");
-
 		if (signinSignupSwitch.signup === 1) {
 			event.preventDefault();
-			console.log("click .signin");
-
 			signinSignupSwitch.signup = 0;
-			console.log(signinSignupSwitch.signup);
-
+			// Remove inputfield
 			$("input[type='name']").remove();
+			// Remove Signup-button
 			$(".signup").remove();
-
+			// Add new switch-button
 			$(".signin").after("<button class='signup'>or <span class='switchLoginMethod'>Sign-Up</span></button>");
-
+			// Set switch button class
 			$(".signin").addClass("selected button");
+			// Switch button text
 			$(".signin").html("Sign-In");
-			
 			$("input[type='email']").focus(); /* focus Firstname and lastname */ 
-			defocusInputForIE(); /* Blur for IE */
+			signinSignupSwitch.signup = 0;
+			// If IE or IE11, defocus all input fields
+	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+				$("body").blur();
+	        }			
 		}
 	});
 
 	/* */
 
 	var itemCounter = 0;
-	var sum = 0;
 	var storePriceInt = 0;
 
 	/* Shopping bag object storing sum and items */
@@ -83,10 +87,10 @@ $(document).ready(function(){
 		console.log(productName);
 		var storePrice = $(this).find(".price").text(); /* save text inside element as string */
 		var storePriceInt = parseInt(storePrice); /* convert string to int */
-		sum += storePriceInt; /* add to sum */
-		console.log(storePriceInt); /* sum converted to int */
-		console.log(sum); /* Shoppingbag sum */
-		shoppingBag.sum = sum; /* set sum */ 
+		shoppingBag.sum += storePriceInt; /* add to sum */
+
+/*		sum += storePriceInt; *//* add to sum */
+/*		shoppingBag.sum = sum; *//* set sum */ 
 
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
