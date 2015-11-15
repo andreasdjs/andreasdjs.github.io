@@ -18,9 +18,7 @@ $(document).ready(function(){
 	var signinSignupSwitch = new Object(); // Object to store state
 	signinSignupSwitch.signup = 0;
 
-
 	$("body").on("click", ".signup", function (event){
-//	$(".signup").click(function (event){
 		if (signinSignupSwitch.signup === 0) {
 			event.preventDefault();
 			// Add inputfield
@@ -33,12 +31,14 @@ $(document).ready(function(){
 			$(".signup").addClass("selected button");
 			// Switch button text
 			$(".signup").html("Sign-Up");
-			$("input[type='name']").focus(); /* Focus Firstname and lastname */ 
-			signinSignupSwitch.signup = 1;
 			// If IE or IE11, defocus all input fields
 	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 				$("body").blur();
-	        }
+	        } else {
+	        	$("input[type='name']").focus(); /* Focus Firstname and lastname */ 
+	        	console.log("focus");
+			}
+			signinSignupSwitch.signup = 1;
 		}
 	});
 
@@ -56,12 +56,14 @@ $(document).ready(function(){
 			$(".signin").addClass("selected button");
 			// Switch button text
 			$(".signin").html("Sign-In");
-			$("input[type='email']").focus(); /* focus Firstname and lastname */ 
-			signinSignupSwitch.signup = 0;
 			// If IE or IE11, defocus all input fields
 	        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 				$("body").blur();
-	        }			
+	        } else {
+				$("input[type='email']").focus(); /* focus Firstname and lastname */ 
+				console.log("focus");
+	        }
+   			signinSignupSwitch.signup = 0;
 		}
 	});
 
@@ -127,7 +129,6 @@ $(document).ready(function(){
 	   as parameter to select the modified DOM element.   */
 
 	$("body").on("click", ".checkout", function() {
-		console.log("click click checkout");
 		$("article").remove();
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Thank you for choosing to buy from Melon-Citron.</h1><p>Your order is now being processed.</p></article>");		
 		/* Hide shoppingBag items */
