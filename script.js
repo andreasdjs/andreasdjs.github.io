@@ -78,19 +78,14 @@ $(document).ready(function(){
 	shoppingBag.price = [];
 	shoppingBag.productName = [];
 	shoppingBag.getSum = function() { 
-		console.log("shoppingBag.getSum: " + shoppingBag.sum); 
-			return shoppingBag.sum;
+		return shoppingBag.sum;
 	};
 
 	$(".buyButton").click(function (){
 		var productName = $(this).parent().parent().find("h3").text(); /* vad heter produkten? */
-		console.log(productName);
 		var storePrice = $(this).find(".price").text(); /* save text inside element as string */
 		var storePriceInt = parseInt(storePrice); /* convert string to int */
 		shoppingBag.sum += storePriceInt; /* add to sum */
-
-/*		sum += storePriceInt; *//* add to sum */
-/*		shoppingBag.sum = sum; *//* set sum */ 
 
 		$(".shoppingBag").addClass("itemsToCheckout");
 		itemCounter += 1;
@@ -100,32 +95,22 @@ $(document).ready(function(){
 
 		shoppingBag.price.push(storePriceInt); /* Store item price in array */
 		shoppingBag.productName.push(productName);
-		console.log("Added to shoppingbag\n" + productName + "\nPrice: " + storePrice + " kr");
 	});
 
 	/* -- Show shopping bag-- */
 
 	$(".shoppingBag").click(function (event){
 		event.preventDefault();		
-
-		console.log("loop index");
-		for(var i in shoppingBag.price) {
-     		 console.log("Loopindexprice:" + shoppingBag.price[i]);
-		}
-
 		$("article").remove(); // clean page
+		// Add shopping bag content
 		$("#innerContainer").html("<article class='mainArticleShoppingBag'><h1>Your shopping bag</h1></article>");
-		
 		for(var i in shoppingBag.price) {
     		$("article").append("<tr><td>" + shoppingBag.productName[i] + "</td><td>" + shoppingBag.price[i] + " kr</td></tr>");
 		}
-		
 		$("tr").wrapAll("<table></table>");
-
 		$("article").append("<p>Number of items: " + shoppingBag.numberOfItems + "</p>");
 		$("article").append("<p><strong>Total</strong>: " + shoppingBag.getSum() + " kr </p>")
 		$("article").append("<button class='button checkout'>Check out</button>");
-
 	});
 
 	/* -- Launch full screen advertisment box (make sure Ad-block is switched off) --*/
