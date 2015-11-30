@@ -84,6 +84,10 @@ font-weight: Book;
 	}
 }
 
+header > h1 {
+	text-align: center;
+}
+
 article > h5 {
 	text-align: center;
 
