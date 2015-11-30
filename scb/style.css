@@ -86,6 +86,8 @@ font-weight: Book;
 
 header > h1 {
 	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 4px solid black;
 }
 
 article > h5 {
