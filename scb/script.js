@@ -221,7 +221,9 @@ var jsonObj2 = {
                 var dataArray = [obj.data[0].values[0], obj.data[1].values[0]]
 
 
-  var title = capitalizeFirstLetter(obj.columns[2].text + " - " + obj.columns[1].text);
+//  var title = capitalizeFirstLetter(obj.columns[2].text + " - " + obj.columns[1].text);
+  var title = capitalizeFirstLetter(obj.columns[2].text);
+
       console.log("this is title: " + title);
 
   $("article > h5").html(title);

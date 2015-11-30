@@ -42,7 +42,7 @@ nav li {
 }
 
 footer {
-	position:fixed;
+	position: fixed; 
 	left:0px;
 	bottom:0px;
 	height:40px;
@@ -55,10 +55,12 @@ footer {
 	/* "experimental technology" */
 	-moz-box-sizing: border-box;
 	box-sizing: border-box; 
+	background-color: white;
 }
 
 #container {
 	margin: 21px;
+	height:100%;
 }
 
 #content {
@@ -70,7 +72,7 @@ article {
 }
 
 #chart_div {
-
+margin-bottom: 61px;
 }
 
 .tk-futura-pt, h3 {
