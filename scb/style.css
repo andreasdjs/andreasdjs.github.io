@@ -42,10 +42,10 @@ nav li {
 }
 
 footer {
-	position: fixed; 
+/*	position: fixed; 
 	left:0px;
-	bottom:0px;
-	height:40px;
+	bottom:0px; */
+	height:40px; 
 	width:100%;
 	font-size: 11px;
 	line-height:38px;
@@ -73,7 +73,7 @@ article {
 }
 
 #chart_div {
-margin-bottom: 161px;
+ /* margin-bottom: 161px; */
 }
 
 .tk-futura-pt, h3 {
