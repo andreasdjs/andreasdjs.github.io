@@ -77,3 +77,16 @@ article {
 font-weight: Book;
 
 }
+
+@media (max-width: 800px) {
+	#container {
+		margin: 8px;
+	}
+}
+
+article > h5 {
+	text-align: center;
+
+}
+
+
