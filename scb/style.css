@@ -1,0 +1,73 @@
+
+html {
+	height: 100%;
+}
+
+body { 
+	font-family: 'Helvetica Neue', Helvetica;
+	font-size: 21px;
+	height: 100%;
+}
+
+button, input, select, textarea {
+		font-family : inherit;
+		font-size   : 100%;
+}
+
+button { 
+	width: 150px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul { 
+	display: flex;
+}
+
+li { 
+	padding: 10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left: 0px;
+	list-style-type: none;
+}
+
+nav li { 
+	padding-left:0px;
+}
+
+footer {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:40px;
+	width:100%;
+	font-size: 11px;
+	line-height:38px;
+	text-align: center;
+	border-top: 2px solid black;
+	/* border and padding doesn't affect the size of the box */
+	/* "experimental technology" */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+#container {
+	margin: 21px;
+}
+
+#content {
+	margin-top: 21px;
+}
+
+article { 
+
+}
+
+#chart_div {
+
+}
