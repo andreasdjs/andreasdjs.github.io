@@ -107,12 +107,10 @@ google.setOnLoadCallback(function() {
       $.get( "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0101/BO0101A/LagenhetNyKv/", function( data ) {
          var arr = data.variables[3].values;
          $.each(arr, function(i, val){
-//            console.log(i);
-//            console.log(val);
-            $("select").prepend("<option value='" + val + "'>" + val + "</option>");
+            var year = val.slice(0,4);
+            var k = val.slice(4);
+            $("select").prepend("<option value='" + val + "'>" + year + " " + k + "</option>");
          });
-
-
       }, "json" );
 
 
