@@ -174,25 +174,9 @@ google.setOnLoadCallback(function() {
           	data: JSON.stringify(jsonObj2),  //skapa en textsträng av vår JSON-formaterad fråga 	  
           	dataType: "json",
           	success: function(obj){		//Ta emot JSON objektet från SCB 	 
-            	 		console.log(obj);
-      //      	 		console.log(obj.data[0].values[0]);
-      //      	 		console.log(obj.data[1].values[0]);
-                      console.log(obj.columns[0].text);
-                      console.log(obj.columns[1].text);
-                      console.log(obj.columns[2].text);
-      /*
-            	 		var result = "<h1>Data:</h1>";
-            	 		result += "<p>" + obj.data[0].values[0] + "</p>";
-            	 		result += "<p>" + obj.data[1].values[0] + "</p>";
-            	 		$("#content article").html(result); */
-
-      /*                var dataArray = [obj.data[0].values[0], obj.data[1].values[0]]
-                      drawMaterial(dataArray, obj.columns); 
-      */
-                     // DataArray
-                     // var dataArray = [obj.data[0].values[0], obj.data[1].values[0]]
-
-            //  var title = capitalizeFirstLetter(obj.columns[2].text + " - " + obj.columns[1].text);
+//                      console.log(obj.columns[0].text);
+//                      console.log(obj.columns[1].text);
+//                      console.log(obj.columns[2].text);
 
             // Get Chart title and set capital letter
             var title = capitalizeFirstLetter(obj.columns[2].text);
