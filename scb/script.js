@@ -51,66 +51,79 @@ google.setOnLoadCallback(function() {
 
       /* ----------------------------- befolkning ----------------------------- */
 
-   	$("html").on("click", ".befolkningJSON", function(event) {
+    $("html").on("click", ".befolkningJSON", function(event) {
 
          // Set JSON Object
-   		var jsonObj = 
-   		{   
-   		"query": [
-   		 {       
-   		 "code": "ContentsCode",
-   		  "selection": {         
-   		    "filter": "item",         
-   		    "values": [           
-   		      "BE0101N1"         
-   		    ]       
-   		   }     
-   		},    
-   		{       
-   		  "code": "Tid",
-   		   "selection": {         
-   		   "filter": "item",         
-   		   "values": [           
-   		   "2010",           
-   		   "2011"         
-   		   ]       
-   		  }     
-   		 }    
-   		],   
-   		"response": {     
-   		  "format": "json"   
-   		 } 
-   		}
+      var jsonObj = 
+      {   
+      "query": [
+       {       
+       "code": "ContentsCode",
+        "selection": {         
+          "filter": "item",         
+          "values": [           
+            "BE0101N1"         
+          ]       
+         }     
+      },    
+      {       
+        "code": "Tid",
+         "selection": {         
+         "filter": "item",         
+         "values": [           
+         "2010",           
+         "2011"         
+         ]       
+        }     
+       }    
+      ],   
+      "response": {     
+        "format": "json"   
+       } 
+      }
 
       // Call SCB with .ajax
 
       $.ajax({
            url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy",
-       	  	type: "POST",
-       	  	data: JSON.stringify(jsonObj),    // Make JSON like a string 	  
-       	  	dataType: "json",                 // Use JSON
-       	  	success: function(obj){	          // Recieve JSON object from SCB 	 
-         	 	console.log(obj);
-    	      	},
-         	error: function() {
+            type: "POST",
+            data: JSON.stringify(jsonObj),    // Make JSON like a string    
+            dataType: "json",                 // Use JSON
+            success: function(obj){           // Recieve JSON object from SCB    
+            console.log(obj);
+              },
+          error: function() {
                console.log("error");
-       	   }
+           }
         
          }); //end $.ajax
 
-   	});
+    });
 
       /* ----------------------------- Lägenheter ----------------------------- */
 
       // Get list of all measurements
 
       $.get( "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0101/BO0101A/LagenhetNyKv/", function( data ) {
+         console.log("GET DATA:");
+         console.log(data.variables[3].values);  // Get kvartal
+         console.log("---------");
+/*         
+         $("select").append("<option value='2010K3'>2010K3</option>");
+         $("select").append("<option value='2011K3'>2011K3</option>");
+         $("select").append("<option value='2012K3'>2012K3</option>");
+         $("select").append("<option value='2013K3'>2013K3</option>");
+         $("select").append("<option value='2014K3'>2014K3</option>");
+         $("select").append("<option value='2015K3' selected>2015K3</option>");
+*/
          var arr = data.variables[3].values;
          $.each(arr, function(i, val){
-            var year = val.slice(0,4);
-            var k = val.slice(4);
-            $("select").prepend("<option value='" + val + "'>" + year + " " + k + "</option>");
+            console.log(i);
+            console.log(val);
+            $("select").prepend("<option value='" + val + "'>" + val + "</option>");
          });
+
+
       }, "json" );
 
 
@@ -168,13 +181,29 @@ google.setOnLoadCallback(function() {
 
          $.ajax({
             url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0101/BO0101A/LagenhetNyKv/",
-          	type: "POST",
-          	data: JSON.stringify(jsonObj2),  //skapa en textsträng av vår JSON-formaterad fråga 	  
-          	dataType: "json",
-          	success: function(obj){		//Ta emot JSON objektet från SCB 	 
-//                      console.log(obj.columns[0].text);
-//                      console.log(obj.columns[1].text);
-//                      console.log(obj.columns[2].text);
+            type: "POST",
+            data: JSON.stringify(jsonObj2),  //skapa en textsträng av vår JSON-formaterad fråga     
+            dataType: "json",
+            success: function(obj){   //Ta emot JSON objektet från SCB   
+                  console.log(obj);
+      //            console.log(obj.data[0].values[0]);
+      //            console.log(obj.data[1].values[0]);
+                      console.log(obj.columns[0].text);
+                      console.log(obj.columns[1].text);
+                      console.log(obj.columns[2].text);
+      /*
+                  var result = "<h1>Data:</h1>";
+                  result += "<p>" + obj.data[0].values[0] + "</p>";
+                  result += "<p>" + obj.data[1].values[0] + "</p>";
+                  $("#content article").html(result); */
+
+      /*                var dataArray = [obj.data[0].values[0], obj.data[1].values[0]]
+                      drawMaterial(dataArray, obj.columns); 
+      */
+                     // DataArray
+                     // var dataArray = [obj.data[0].values[0], obj.data[1].values[0]]
+
+            //  var title = capitalizeFirstLetter(obj.columns[2].text + " - " + obj.columns[1].text);
 
             // Get Chart title and set capital letter
             var title = capitalizeFirstLetter(obj.columns[2].text);
@@ -184,11 +213,11 @@ google.setOnLoadCallback(function() {
 
             // Call the draw bars function with fetched data.
             drawBars(obj.columns, obj.data); 
-       	   },
+           },
             error: function(obj) {
-            	console.log("error");
-            	console.log(obj);
-          	}
+              console.log("error");
+              console.log(obj);
+            }
            
          }); //end $.ajax
 
