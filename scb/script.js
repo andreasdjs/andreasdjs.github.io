@@ -40,89 +40,37 @@ google.setOnLoadCallback(function() {
       // https://api.jquery.com/Ajax_Events/ 
 
       $(document).ajaxStart(function() {
-         console.log("Loading...")
+//         console.log("Loading...")
          $("button").prop("disabled",true);
       });
       $(document).ajaxStop(function() {
-         console.log("Finished!")
+//         console.log("Finished!")
          $("button").prop("disabled",false);
       });
 
-
-      /* ----------------------------- befolkning ----------------------------- */
-
-    $("html").on("click", ".befolkningJSON", function(event) {
-
-         // Set JSON Object
-      var jsonObj = 
-      {   
-      "query": [
-       {       
-       "code": "ContentsCode",
-        "selection": {         
-          "filter": "item",         
-          "values": [           
-            "BE0101N1"         
-          ]       
-         }     
-      },    
-      {       
-        "code": "Tid",
-         "selection": {         
-         "filter": "item",         
-         "values": [           
-         "2010",           
-         "2011"         
-         ]       
-        }     
-       }    
-      ],   
-      "response": {     
-        "format": "json"   
-       } 
-      }
-
-      // Call SCB with .ajax
-
-      $.ajax({
-           url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy",
-            type: "POST",
-            data: JSON.stringify(jsonObj),    // Make JSON like a string    
-            dataType: "json",                 // Use JSON
-            success: function(obj){           // Recieve JSON object from SCB    
-            console.log(obj);
-              },
-          error: function() {
-               console.log("error");
-           }
-        
-         }); //end $.ajax
-
-    });
-
       /* ----------------------------- Lägenheter ----------------------------- */
 
-      // Get list of all measurements
+      // Get list of all measurements conducted
 
       $.get( "http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0101/BO0101A/LagenhetNyKv/", function( data ) {
          var arr = data.variables[3].values;
          $.each(arr, function(i, val){
             var year = val.slice(0,4);
             var k = val.slice(4);
+
+            // Put it in the drowdown menu
             $("select").prepend("<option value='" + val + "'>" + year + " " + k + "</option>");
          });
       }, "json" );
 
-
-      // Get 2015 K3 for whole sweden
+      // Get latest measurement for throughout Sweden
 
       $("html").on("click", ".custom", function(event) {
          event.preventDefault();
 
-         // get selected value
-         console.log($( "select" ).val()); // 2015K3
+         // JSON obj to send with POST request
 
-         var jsonObj2 = {
+         var jsonObj = {
            "query": [
              {
                "code": "Region",
@@ -155,8 +103,7 @@ google.setOnLoadCallback(function() {
                "selection": {
                  "filter": "item",
                  "values": [
-//                   "2015K3"
-                   $( "select" ).val() // set year and quarter
+                   $( "select" ).val() // get selected value
                  ]
                }
              }
@@ -166,15 +113,14 @@ google.setOnLoadCallback(function() {
            }
          }
 
+         // POST JSON to server. Output title and send selected data to Draw Charts function.
+
          $.ajax({
             url:"http://api.scb.se/OV0104/v1/doris/sv/ssd/START/BO/BO0101/BO0101A/LagenhetNyKv/",
             type: "POST",
-            data: JSON.stringify(jsonObj2),  //skapa en textsträng av vår JSON-formaterad fråga     
+            data: JSON.stringify(jsonObj),  //skapa en textsträng av vår JSON-formaterad fråga     
             dataType: "json",
             success: function(obj){   //Ta emot JSON objektet från SCB   
-//                      console.log(obj.columns[0].text);
-//                      console.log(obj.columns[1].text);
-//                      console.log(obj.columns[2].text);
 
             // Get Chart title and set capital letter
             var title = capitalizeFirstLetter(obj.columns[2].text);
@@ -186,15 +132,16 @@ google.setOnLoadCallback(function() {
             drawBars(obj.columns, obj.data); 
            },
             error: function(obj) {
-              console.log("error");
+              console.log("Error.");
               console.log(obj);
             }
            
-         }); //end $.ajax
+         }); 
 
       });
 
    /*
+   Hela databasen:
    http://www.statistikdatabasen.scb.se/pxweb/sv/ssd/?rxid=758f4ced-0396-4e48-8bea-4edf0fc321d2
    Nya undersökningar:
    http://www.scb.se/sv_/Hitta-statistik/Statistikdatabasen/Senast-publicerade-tabeller/
