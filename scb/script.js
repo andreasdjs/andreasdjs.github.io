@@ -26,8 +26,8 @@ google.setOnLoadCallback(function() {
          data.addColumn('string', columnOne);
          data.addColumn('number', 'Antal');
          data.addRows([
-               ['Lägenheter', row1],
-               ['Radhus', row2] 
+               ['Flerbostadshus', row1],
+               ['Småhus', row2] 
          ]);
          var options = {
             bars: 'vertical'
